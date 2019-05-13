@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">CondominiumManager</string>
-    
-    <string-array name="condoSelectValues">
-        <item>Condo1</item>
-        <item>Condo2</item>
-        <item>Condo3</item>
-    </string-array>
-</resources>
