@@ -10,7 +10,7 @@
             android:title="@string/nav_profile" />
         <item
             android:id="@+id/nav_settings"
-            android:icon="@android:drawable/ic_menu_set_as"
+            android:icon="@mipmap/ic_settings_foreground"
             android:title="@string/nav_settings" />
         <item
             android:id="@+id/nav_logout"
