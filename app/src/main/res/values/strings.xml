@@ -30,4 +30,6 @@
     <string name="title_activity_manager">Manager</string>
     <string name="title_activity_register">Register</string>
     <string name="title_activity_thankyou">Thankyou</string>
+    <string name="title_activity_readings">Readings</string>
+    <string name="title_activity_report">Report</string>
 </resources>

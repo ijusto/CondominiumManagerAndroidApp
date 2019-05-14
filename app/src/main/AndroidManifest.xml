@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".Report"
+            android:label="@string/title_activity_report"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".Readings"
+            android:label="@string/title_activity_readings"
+            android:theme="@style/NoActionBar" />
+        <activity
             android:name=".Thankyou"
             android:label="@string/title_activity_thankyou"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".Register"
             android:label="@string/title_activity_register"
