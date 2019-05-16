@@ -12,7 +12,7 @@
         <activity
             android:name=".Events"
             android:label="@string/title_activity_events"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".Report"
             android:label="@string/title_activity_report"
