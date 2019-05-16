@@ -3,7 +3,9 @@ package com.example.condominiummanager.ui.login;
 import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
@@ -21,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.condominiummanager.MainActivity;
 import com.example.condominiummanager.R;
+import com.example.condominiummanager.Register;
 import com.example.condominiummanager.Tenant;
 import com.example.condominiummanager.ui.login.LoginViewModel;
 import com.example.condominiummanager.ui.login.LoginViewModelFactory;
@@ -40,14 +43,28 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", Context.MODE_PRIVATE);
+        final Button registerbutton = findViewById(R.id.register);
+
+        registerbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Register.class);
+                startActivity(i);
+            }
+        });
+
         loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
+                String username = usernameEditText.getText().toString();
+                prefs.edit().putString("usernametext", username).apply();
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
         });
+
 
        /* loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override

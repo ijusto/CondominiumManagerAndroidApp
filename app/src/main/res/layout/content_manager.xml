@@ -23,28 +23,28 @@
         app:srcCompat="@drawable/ic_home_black_24dp" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/events"
         android:layout_width="75dp"
         android:layout_height="80dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/maintenance"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/condoselect"
         app:srcCompat="@android:drawable/ic_menu_my_calendar" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/maintenance"
         android:layout_width="75dp"
         android:layout_height="80dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="88dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/condoselect"
         app:srcCompat="@drawable/ic_menu_manage" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/readings"
         android:layout_width="75dp"
         android:layout_height="80dp"
         android:layout_marginTop="36dp"
@@ -54,7 +54,7 @@
         app:srcCompat="@drawable/ic_statistics" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/contacts"
         android:layout_width="75dp"
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
@@ -67,13 +67,13 @@
         app:srcCompat="@drawable/ic_phone_book" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/payments"
         android:layout_width="75dp"
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/readings"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -91,7 +91,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/events" />
 
     <TextView
         android:id="@+id/textView3"
@@ -105,7 +105,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintTop_toBottomOf="@+id/payments" />
 
     <TextView
         android:id="@+id/textView4"
@@ -116,7 +116,7 @@
         android:gravity="center"
         android:text="Maintenance"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/maintenance" />
 
     <TextView
         android:id="@+id/textView5"
@@ -127,7 +127,7 @@
         android:gravity="center"
         android:text="Readings"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/readings" />
 
     <TextView
         android:id="@+id/textView15"
@@ -143,7 +143,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/invitation"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -157,11 +157,11 @@
         android:text="Contacts"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/contacts"
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/condoselect"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -172,7 +172,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/invitation"
         android:layout_width="75dp"
         android:layout_height="80dp"
         android:layout_marginStart="92dp"
@@ -180,7 +180,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintStart_toEndOf="@+id/contacts"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/ic_mail" />
 

@@ -1,6 +1,8 @@
 package com.example.condominiummanager;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", Context.MODE_PRIVATE);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -42,8 +46,24 @@ public class MainActivity extends AppCompatActivity
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        Intent i = new Intent(getApplicationContext(), Tenant.class);
-        startActivity(i);
+        String username = prefs.getString("usernametext", "tenant");
+
+        switch(username){
+            case "tenant":
+                Intent i = new Intent(getApplicationContext(), Tenant.class);
+                startActivity(i);
+                break;
+            case "maintenance":
+                Intent j = new Intent(getApplicationContext(), Maintenance.class);
+                startActivity(j);
+                break;
+            case "manager":
+                Intent k = new Intent(getApplicationContext(), Manager.class);
+                startActivity(k);
+                break;
+
+        }
+
 
     }
 
