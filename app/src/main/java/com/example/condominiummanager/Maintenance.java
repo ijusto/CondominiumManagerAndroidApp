@@ -37,7 +37,7 @@ public class Maintenance extends AppCompatActivity {
         maintenance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Maintenance.class);
+                Intent i = new Intent(getApplicationContext(), Report.class);
                 startActivity(i);
             }
         });
