@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toStartOf="@+id/maintenance"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/condoselect"
-        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+        app:srcCompat="@mipmap/events_icon" />
 
     <ImageView
         android:id="@+id/maintenance"
@@ -40,7 +40,7 @@
         android:layout_marginEnd="88dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/condoselect"
-        app:srcCompat="@drawable/ic_menu_manage" />
+        app:srcCompat="@mipmap/maintenance_icon" />
 
     <ImageView
         android:id="@+id/readings"
@@ -50,7 +50,7 @@
         android:layout_marginEnd="88dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:srcCompat="@drawable/ic_statistics" />
+        app:srcCompat="@mipmap/readings_icon" />
 
     <ImageView
         android:id="@+id/contacts"
@@ -63,7 +63,7 @@
         app:layout_constraintHorizontal_bias="0.234"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@drawable/ic_phone_book" />
+        app:srcCompat="@mipmap/contacts_icon" />
 
     <ImageView
         android:id="@+id/payments"
@@ -76,7 +76,7 @@
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/ic_dollar_symbol" />
+        app:srcCompat="@mipmap/payments_icon" />
 
     <TextView
         android:id="@+id/textView2"
@@ -162,7 +162,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/contacts"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:srcCompat="@mipmap/profile_icon" />
 
     <TextView
         android:id="@+id/textView16"
@@ -193,7 +193,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/ic_mysettings" />
+        app:srcCompat="@mipmap/settings_icon" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -209,7 +209,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_menu_send" />
+        app:srcCompat="@mipmap/chat_icon" />
 
 
 </android.support.constraint.ConstraintLayout>
