@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.condominiummanager.ui.login.LoginActivity;
+
 public class Manager extends AppCompatActivity {
 
     @Override
@@ -78,6 +80,11 @@ public class Manager extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public void onBackPressed(){
+        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(i);
     }
 
 }
