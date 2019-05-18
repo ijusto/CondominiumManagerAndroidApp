@@ -44,4 +44,5 @@
     Observations: Attendance is mandatory\n\n\n
 
     Going:      \n  </string>
+    <string name="title_activity_report_end">reportEnd</string>
 </resources>

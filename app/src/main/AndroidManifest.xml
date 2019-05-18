@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".reportEnd"
+            android:label="@string/title_activity_report_end"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
             android:name=".ProfileManager"
             android:label="@string/title_activity_profile_manager"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".profile_maintenance"
             android:label="@string/title_activity_profile_maintenance"
