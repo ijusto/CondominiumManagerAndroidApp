@@ -34,4 +34,5 @@
     <string name="title_activity_report">Report</string>
     <string name="title_activity_events">Events</string>
     <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_profile_tenant">ProfileTenant</string>
 </resources>

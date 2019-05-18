@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/condo_manager_app_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
+        <activity
+            android:name=".ProfileTenant"
+            android:label="@string/title_activity_profile_tenant"
+            android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".Events"
             android:label="@string/title_activity_events"
