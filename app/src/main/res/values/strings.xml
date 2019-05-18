@@ -45,4 +45,5 @@
 
     Going:      \n  </string>
     <string name="title_activity_report_end">reportEnd</string>
+    <string name="title_activity_task_list">TaskList</string>
 </resources>

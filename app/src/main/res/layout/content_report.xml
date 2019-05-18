@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/report_title"
         android:layout_width="285dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/date"
         android:layout_width="285dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -48,7 +48,7 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/report_title" />
 
     <EditText
         android:id="@+id/description"
@@ -63,7 +63,7 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/date" />
 
     <Button
         android:id="@+id/submit_problem"

@@ -38,6 +38,9 @@ public class Report extends AppCompatActivity {
         gotoThanks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final EditText name = findViewById(R.id.report_title);
+                String title = name.getText().toString();
+                prefs.edit().putString("reporttitle", title).apply();
                 Intent i = new Intent(getApplicationContext(), reportEnd.class);
                 startActivity(i);
             }
