@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 String username = usernameEditText.getText().toString();
                 prefs.edit().putString("usernametext", username).apply();
-                Intent i = new Intent(getApplicationContext(), Events.class);
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
         });
