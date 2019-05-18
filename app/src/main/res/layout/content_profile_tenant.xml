@@ -17,7 +17,7 @@
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:srct="@drawable/ic_home_black_24dp" />
+        android:src="@drawable/ic_home_black_24dp" />
 
     <TextView
         android:id="@+id/textView18"

@@ -21,6 +21,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.condominiummanager.Events;
 import com.example.condominiummanager.MainActivity;
 import com.example.condominiummanager.R;
 import com.example.condominiummanager.Register;
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 String username = usernameEditText.getText().toString();
                 prefs.edit().putString("usernametext", username).apply();
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), Events.class);
                 startActivity(i);
             }
         });

@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".AddEvent"
+            android:label="@string/title_activity_add_event"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
             android:name=".ProfileTenant"
             android:label="@string/title_activity_profile_tenant"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".Events"
             android:label="@string/title_activity_events"
