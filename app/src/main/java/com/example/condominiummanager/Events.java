@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -75,6 +76,15 @@ public class Events extends AppCompatActivity {
                 }
             });
 
+            final ImageView go_back = findViewById(R.id.go_back_events);
+
+            go_back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(i);
+                }
+            });
 
         }
 

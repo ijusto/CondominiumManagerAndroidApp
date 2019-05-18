@@ -44,4 +44,10 @@
     Observations: Attendance is mandatory\n\n\n
 
     Going:      \n  </string>
+    <string name="title_activity_contacts_maintenance">ContactsMaintenance</string>
+    <string name="title_activity_contacts_tenant">ContactsTenant</string>
+    <string name="title_activity_payments_manager">PaymentsManager</string>
+    <string name="title_activity_payments_maintenance">PaymentsMaintenance</string>
+    <string name="title_activity_payments_tenant">PaymentsTenant</string>
+    <string name="title_activity_settings">Settings</string>
 </resources>

@@ -8,6 +8,19 @@
     tools:context=".Events"
     tools:showIn="@layout/activity_events">
 
+    <ImageView
+        android:id="@+id/go_back_events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/back_icon" />
+
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"

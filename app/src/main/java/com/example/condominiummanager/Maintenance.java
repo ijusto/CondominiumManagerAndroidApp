@@ -24,6 +24,7 @@ public class Maintenance extends AppCompatActivity {
         final ImageView contacts = findViewById(R.id.contacts);
         final ImageView payments = findViewById(R.id.payments);
         final ImageView profile = findViewById(R.id.profilemaintenance);
+        final ImageView settings = findViewById(R.id.settings_maintenance);
 
 
         events.setOnClickListener(new View.OnClickListener() {
@@ -58,26 +59,30 @@ public class Maintenance extends AppCompatActivity {
             }
         });
 
-        //TODO implement contacts
-        /*contacts.setOnClickListener(new View.OnClickListener() {
+        contacts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Contacts.class);
+                Intent i = new Intent(getApplicationContext(), ContactsMaintenance.class);
                 startActivity(i);
             }
-        });*/
+        });
 
 
-        //TODO implement payments
-        /*payments.setOnClickListener(new View.OnClickListener() {
+        payments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Payments.class);
+                Intent i = new Intent(getApplicationContext(), PaymentsMaintenance.class);
                 startActivity(i);
             }
-        });*/
+        });
 
-
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Settings.class);
+                startActivity(i);
+            }
+        });
 
     }
 

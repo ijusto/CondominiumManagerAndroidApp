@@ -10,9 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".PaymentsTenant"
+            android:label="@string/title_activity_payments_tenant"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".PaymentsMaintenance"
+            android:label="@string/title_activity_payments_maintenance"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".PaymentsManager"
+            android:label="@string/title_activity_payments_manager"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".ContactsTenant"
+            android:label="@string/title_activity_contacts_tenant"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".ContactsMaintenance"
+            android:label="@string/title_activity_contacts_maintenance"
+            android:theme="@style/NoActionBar" />
+        <activity
             android:name=".ProfileManager"
             android:label="@string/title_activity_profile_manager"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".profile_maintenance"
             android:label="@string/title_activity_profile_maintenance"

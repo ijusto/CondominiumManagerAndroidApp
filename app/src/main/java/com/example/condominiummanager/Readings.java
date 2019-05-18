@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.condominiummanager.ui.login.LoginActivity;
 
@@ -20,12 +21,11 @@ public class Readings extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final Button backtologin = findViewById(R.id.go_back);
+        final ImageView go_back = findViewById(R.id.go_back_readings);
 
-        backtologin.setOnClickListener(new View.OnClickListener(){
+        go_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
