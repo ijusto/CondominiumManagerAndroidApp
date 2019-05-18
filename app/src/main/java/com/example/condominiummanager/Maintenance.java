@@ -2,16 +2,12 @@ package com.example.condominiummanager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.condominiummanager.ui.login.LoginActivity;
-
-import java.util.List;
 
 public class Maintenance extends AppCompatActivity {
 
@@ -27,6 +23,8 @@ public class Maintenance extends AppCompatActivity {
         final ImageView readings = findViewById(R.id.readings);
         final ImageView contacts = findViewById(R.id.contacts);
         final ImageView payments = findViewById(R.id.payments);
+        final ImageView profile = findViewById(R.id.profilemaintenance);
+
 
         events.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +49,15 @@ public class Maintenance extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), profile_maintenance.class);
+                startActivity(i);
+            }
+        });
+
         //TODO implement contacts
         /*contacts.setOnClickListener(new View.OnClickListener() {
             @Override

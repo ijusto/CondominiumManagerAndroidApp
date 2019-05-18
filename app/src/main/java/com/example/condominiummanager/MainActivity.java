@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
 
         switch(username){
             case "tenant":
-                Intent i = new Intent(getApplicationContext(), ProfileTenant.class);
+                Intent i = new Intent(getApplicationContext(), Tenant.class);
                 startActivity(i);
                 break;
             case "maintenance":

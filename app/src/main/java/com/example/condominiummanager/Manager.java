@@ -25,6 +25,8 @@ public class Manager extends AppCompatActivity {
         final ImageView readings = findViewById(R.id.readings);
         final ImageView contacts = findViewById(R.id.contacts);
         final ImageView payments = findViewById(R.id.payments);
+        final ImageView profile = findViewById(R.id.profilemanager);
+
 
         events.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +51,15 @@ public class Manager extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ProfileManager.class);
+                startActivity(i);
+            }
+        });
+
         //TODO implement contacts
         /*contacts.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -35,4 +35,8 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_profile_tenant">ProfileTenant</string>
     <string name="title_activity_add_event">Add Event</string>
+    <string name="title_activity_contacts">contacts</string>
+    <string name="title_activity_contacts_manager">contacts_manager</string>
+    <string name="title_activity_profile_maintenance">profile_maintenance</string>
+    <string name="title_activity_profile_manager">ProfileManager</string>
 </resources>
