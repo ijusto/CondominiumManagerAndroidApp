@@ -39,4 +39,9 @@
     <string name="title_activity_contacts_manager">contacts_manager</string>
     <string name="title_activity_profile_maintenance">profile_maintenance</string>
     <string name="title_activity_profile_manager">ProfileManager</string>
+    <string name="meeting">Name: Condominium Meeting\n
+    Date:  22/05/2019 19:00\n
+    Observations: Attendance is mandatory\n\n\n
+
+    Going:      \n  </string>
 </resources>

@@ -9,6 +9,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CalendarView;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.example.condominiummanager.ui.login.LoginActivity;
 
@@ -33,7 +38,56 @@ public class Events extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        if(prefs.getString("done", "false").equals("true")){
+
+            showevent();
+            CalendarView calendar = findViewById(R.id.calendarView);
+
+            calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+                @Override
+                public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+                    TextView details = findViewById(R.id.detailstwenty);
+                    CheckBox going = findViewById(R.id.goingevent);
+                    if (year == 2019 && month == 4 && dayOfMonth == 22){
+                        details.setVisibility(View.VISIBLE);
+                        going.setVisibility(View.VISIBLE);
+                        if(prefs.getString("checked","false").equals("true")){
+                            going.setChecked(true);
+                        }
+                    }else{
+                        details.setVisibility(View.INVISIBLE);
+                        going.setVisibility(View.INVISIBLE);
+                    }
+
+                }
+            });
+
+            final CheckBox going = findViewById(R.id.goingevent);
+            going.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    if (going.isChecked()){
+                        prefs.edit().putString("checked","true").apply();
+                    }else{
+                        prefs.edit().putString("checked","false").apply();
+                    }
+                }
+            });
+
+
+        }
+
+
+
     }
+
+    private void showevent() {
+        final Button event = findViewById(R.id.eventbutton);
+        event.setVisibility(View.VISIBLE);
+
+    }
+
 
     @Override
     public void onBackPressed(){
