@@ -24,4 +24,47 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.111" />
 
+    <Button
+        android:id="@+id/eventbutton"
+        android:layout_width="22dp"
+        android:layout_height="23dp"
+        android:text="Button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/calendarView"
+        app:layout_constraintEnd_toEndOf="@+id/calendarView"
+        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintTop_toTopOf="@+id/calendarView"
+        app:layout_constraintVertical_bias="0.752" />
+
+    <TextView
+        android:id="@+id/detailstwenty"
+        android:layout_width="351dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/meeting"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <CheckBox
+        android:id="@+id/goingevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/detailstwenty"
+        app:layout_constraintEnd_toEndOf="@+id/detailstwenty"
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toStartOf="@+id/detailstwenty"
+        app:layout_constraintTop_toTopOf="@+id/detailstwenty"
+        app:layout_constraintVertical_bias="0.851" />
+
 </android.support.constraint.ConstraintLayout>

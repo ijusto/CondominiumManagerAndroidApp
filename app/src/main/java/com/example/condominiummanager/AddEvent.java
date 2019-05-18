@@ -24,7 +24,7 @@ public class AddEvent extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                prefs.edit().putString("done","true");
+                prefs.edit().putString("done","true").apply();
                 startActivity(new Intent(getApplicationContext(), Events.class));
             }
         });

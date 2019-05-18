@@ -35,4 +35,9 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_profile_tenant">ProfileTenant</string>
     <string name="title_activity_add_event">Add Event</string>
+    <string name="meeting">Name: Condominium Meeting\n
+    Date:  22/05/2019 19:00\n
+    Observations: Attendance is mandatory\n\n\n
+
+    Going:      \n  </string>
 </resources>
