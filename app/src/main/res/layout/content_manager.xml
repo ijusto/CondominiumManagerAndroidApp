@@ -17,8 +17,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="258dp"
-            android:layout_height="230dp"
+            android:layout_width="238dp"
+            android:layout_height="205dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="8dp"
@@ -30,160 +30,152 @@
 
         <ImageView
             android:id="@+id/events"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toStartOf="@+id/maintenance"
+            app:layout_constraintHorizontal_bias="0.562"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/condoselect"
             app:srcCompat="@mipmap/events_icon" />
 
         <ImageView
             android:id="@+id/maintenance"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="88dp"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="76dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/condoselect"
             app:srcCompat="@mipmap/maintenance_icon" />
 
         <ImageView
             android:id="@+id/readings"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="88dp"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="76dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:srcCompat="@mipmap/readings_icon" />
 
         <ImageView
             android:id="@+id/contacts"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/invitation"
+            app:layout_constraintHorizontal_bias="0.535"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
             app:srcCompat="@mipmap/contacts_icon" />
 
         <ImageView
             android:id="@+id/payments"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toStartOf="@+id/readings"
-            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintHorizontal_bias="0.535"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:srcCompat="@mipmap/payments_icon" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="75dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="Events"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.471"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/events" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="96dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="Events"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/events" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="75dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="Payments"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/payments" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="96dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="Payments"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payments" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="90dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="72dp"
-        android:gravity="center"
-        android:text="Maintenance"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maintenance" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="96dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="76dp"
+            android:gravity="center"
+            android:text="Maintenance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/maintenance" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="75dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="88dp"
-        android:gravity="center"
-        android:text="Readings"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/readings" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="96dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="76dp"
+            android:gravity="center"
+            android:text="Readings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/readings" />
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="75dp"
+            android:layout_width="96dp"
             android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="76dp"
             android:gravity="center"
             android:text="Requests"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.509"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/invitation"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/invitation" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="75dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Contacts"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contacts"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="96dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Contacts"
+            app:layout_constraintEnd_toStartOf="@+id/textView15"
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contacts" />
 
         <Spinner
             android:id="@+id/condoselect"
-            android:layout_width="349dp"
-            android:layout_height="23dp"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <ImageView
             android:id="@+id/invitation"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="92dp"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
             android:layout_marginTop="28dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="76dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/contacts"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             app:srcCompat="@mipmap/requests_icon" />
 
@@ -217,31 +209,29 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.227"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
             app:srcCompat="@mipmap/profile_icon" />
 
         <TextView
             android:id="@+id/textView17"
-            android:layout_width="69dp"
-            android:layout_height="68dp"
+            android:layout_width="96dp"
+            android:layout_height="18dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
             android:text="@string/nav_profile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.23"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
