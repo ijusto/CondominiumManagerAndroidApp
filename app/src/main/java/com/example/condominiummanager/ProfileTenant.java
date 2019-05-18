@@ -44,12 +44,18 @@ public class ProfileTenant extends AppCompatActivity {
                 }else{
                     EditText editmail = findViewById(R.id.editemail);
                     TextView emailtext = findViewById(R.id.emailtext);
+                    EditText editmobile = findViewById(R.id.editmobile);
+                    TextView mobiletext = findViewById(R.id.mobiletext);
+
 
                     String email = editmail.getText().toString();
+                    String mobile = editmobile.getText().toString();
                     emailtext.setText(email);
-
+                    mobiletext.setText(mobile);
                     emailtext.setVisibility(View.VISIBLE);
                     editmail.setVisibility(View.INVISIBLE);
+                    mobiletext.setVisibility(View.VISIBLE);
+                    editmobile.setVisibility(View.INVISIBLE);
 
 
                     edit.setText("Edit");
