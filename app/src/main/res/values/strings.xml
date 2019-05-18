@@ -6,7 +6,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -35,4 +34,5 @@
     <string name="title_activity_events">Events</string>
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_profile_tenant">ProfileTenant</string>
+    <string name="title_activity_add_event">Add Event</string>
 </resources>
