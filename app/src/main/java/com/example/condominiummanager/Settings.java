@@ -2,6 +2,7 @@ package com.example.condominiummanager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -73,23 +74,48 @@ public class Settings extends AppCompatActivity {
         final CheckBox second_delete_checkbox = findViewById(R.id.delete_account_confirm_checkBox);
         final ImageView delete_account_rect = findViewById(R.id.delete_account_confirm_rectang);
         final TextView delete_account_text = findViewById(R.id.delete_account_forsure);
+        final Button logOutBtn = findViewById(R.id.logOutButton);
         first_delete_checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
-                second_delete_checkbox.setVisibility(View.VISIBLE);
-                delete_account_rect.setVisibility(View.VISIBLE);
-                delete_account_text.setVisibility(View.VISIBLE);
+                if(isChecked) {
+                    second_delete_checkbox.setVisibility(View.VISIBLE);
+                    delete_account_rect.setVisibility(View.VISIBLE);
+                    delete_account_text.setVisibility(View.VISIBLE);
+                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) logOutBtn.getLayoutParams();
+                    params.verticalBias = 0.76f; // here is one modification for example. modify anything else you want :)
+                    logOutBtn.setLayoutParams(params); // request the view to use the new modified params
+                } else {
+                    second_delete_checkbox.setVisibility(View.INVISIBLE);
+                    delete_account_rect.setVisibility(View.INVISIBLE);
+                    delete_account_text.setVisibility(View.INVISIBLE);
+                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) logOutBtn.getLayoutParams();
+                    params.verticalBias = 0.13f; // here is one modification for example. modify anything else you want :)
+                    logOutBtn.setLayoutParams(params); // request the view to use the new modified params
+                }
            }
         });
+
 
         final Button delete_account_button = findViewById(R.id.delete_account_confirm);
         second_delete_checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
-                delete_account_button.setVisibility(View.VISIBLE);
+                if(isChecked) {
+                    delete_account_button.setVisibility(View.VISIBLE);
+                } else {
+                    delete_account_button.setVisibility(View.INVISIBLE);
+                }
             }
         });
         delete_account_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(i);
+            }
+        });
+        logOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), LoginActivity.class);
