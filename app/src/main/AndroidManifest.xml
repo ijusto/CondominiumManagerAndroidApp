@@ -9,10 +9,17 @@
         android:roundIcon="@mipmap/condo_manager_app_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".InitData">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".PrivateChat"
             android:label="@string/title_activity_private_chat"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".ChatMaintenance"
             android:label="@string/title_activity_chat_maintenance"
@@ -28,7 +35,7 @@
         <activity
             android:name=".Requests"
             android:label="@string/title_activity_requests"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".TaskTenant"
             android:label="@string/title_activity_task_tenant"
@@ -116,11 +123,6 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="CondominiumManager">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"

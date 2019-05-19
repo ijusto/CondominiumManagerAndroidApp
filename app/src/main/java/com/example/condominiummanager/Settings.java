@@ -91,13 +91,13 @@ public class Settings extends AppCompatActivity {
                     String username = prefs.getString("usernametext", "tenant");
                     switch (username) {
                         case "tenant":
-                            prefs.edit().putString("tenantmobile", "true").apply();
+                            prefs.edit().putString("tenantmobileprivacy", "true").apply();
                             break;
                         case "manager":
-                            prefs.edit().putString("managermobile", "true").apply();
+                            prefs.edit().putString("managermobileprivacy", "true").apply();
                             break;
                         case "maintenance":
-                            prefs.edit().putString("maintenancemobile", "true").apply();
+                            prefs.edit().putString("maintenancemobileprivacy", "true").apply();
                             break;
                     }
                     public_mobile.setImageResource(R.mipmap.public_enable_icon);
@@ -106,13 +106,13 @@ public class Settings extends AppCompatActivity {
                     String username = prefs.getString("usernametext", "tenant");
                     switch (username) {
                         case "tenant":
-                            prefs.edit().putString("tenantmobile", "false").apply();
+                            prefs.edit().putString("tenantmobileprivacy", "false").apply();
                             break;
                         case "manager":
-                            prefs.edit().putString("managermobile", "false").apply();
+                            prefs.edit().putString("managermobileprivacy", "false").apply();
                             break;
                         case "maintenance":
-                            prefs.edit().putString("maintenancemobile", "false").apply();
+                            prefs.edit().putString("maintenancemobileprivacy", "false").apply();
                             break;
                     }
 

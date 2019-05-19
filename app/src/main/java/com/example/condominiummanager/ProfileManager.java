@@ -72,7 +72,7 @@ public class ProfileManager extends AppCompatActivity {
 
                     String email = editmail.getText().toString();
                     String mobile = editmobile.getText().toString();
-                    prefs.edit().putString("managermail",email).apply();
+                    prefs.edit().putString("manageremail",email).apply();
                     prefs.edit().putString("managermobile",mobile).apply();
                     emailtext.setText(email);
                     mobiletext.setText(mobile);

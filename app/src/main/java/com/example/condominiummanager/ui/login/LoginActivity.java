@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", Context.MODE_PRIVATE);
         final Button registerbutton = findViewById(R.id.register);
 
+
         registerbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

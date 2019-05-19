@@ -39,6 +39,13 @@ public class Events extends AppCompatActivity {
         CalendarView calendars = findViewById(R.id.calendarView);
 
         calendars.setFirstDayOfWeek(1);
+        final ImageView go_back = findViewById(R.id.go_back_events);
+        go_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         final ImageView add_event_rect_info = findViewById(R.id.add_event_rect_info);
         final TextView day_info = findViewById(R.id.day_info);
@@ -170,14 +177,9 @@ public class Events extends AppCompatActivity {
                 }
             });
 
-            final ImageView go_back = findViewById(R.id.go_back_events);
 
-            go_back.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
+
+
 
         }
 
