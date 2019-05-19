@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/condo_manager_app_icon" />
+        app:srcCompat="@mipmap/condo_manager_app_icon_inside" />
 
     <Button
         android:id="@+id/login"
