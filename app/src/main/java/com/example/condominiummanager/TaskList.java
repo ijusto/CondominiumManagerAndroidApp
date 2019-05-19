@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 
 public class TaskList extends AppCompatActivity {
 
@@ -25,12 +26,12 @@ public class TaskList extends AppCompatActivity {
         final CheckBox check2 = findViewById(R.id.checkBox3);
         final CheckBox check3 = findViewById(R.id.tasktoadd);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        final ImageView go_back = findViewById(R.id.go_back_task_list);
+
+        go_back.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), Report.class);
-                startActivity(i);
+            public void onClick(View v) {
+                finish();
             }
         });
 

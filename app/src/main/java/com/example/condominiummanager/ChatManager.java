@@ -22,8 +22,7 @@ public class ChatManager extends AppCompatActivity {
         go_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Manager.class);
-                startActivity(i);
+                finish();
             }
         });
     }

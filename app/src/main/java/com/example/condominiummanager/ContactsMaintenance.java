@@ -23,8 +23,7 @@ public class ContactsMaintenance extends AppCompatActivity {
         go_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Maintenance.class);
-                startActivity(i);
+                finish();
             }
         });
 

@@ -69,6 +69,16 @@ public class Requests extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
+
+
+        final ImageView go_back = findViewById(R.id.go_back_requests);
+
+        go_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
 

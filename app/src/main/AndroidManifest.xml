@@ -78,10 +78,6 @@
             android:label="@string/title_activity_contacts_manager"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".AddEvent"
-            android:label="@string/title_activity_add_event"
-            android:theme="@style/NoActionBar" />
-        <activity
             android:name=".ProfileTenant"
             android:label="@string/title_activity_profile_tenant"
             android:theme="@style/NoActionBar" />
