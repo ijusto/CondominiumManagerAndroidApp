@@ -1,5 +1,6 @@
 package com.example.condominiummanager;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.Image;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class Requests extends AppCompatActivity {
 
         final ImageView ok = findViewById(R.id.acceptrequest);
         final ImageView oknt = findViewById(R.id.denyrequest);
+        final ImageView req = findViewById(R.id.reqpic);
 
         if (prefs.getString("regdone", "false").equals("true")){
 
@@ -40,7 +42,35 @@ public class Requests extends AppCompatActivity {
             addr.setVisibility((View.VISIBLE));
 
 
+        }else{
+            name.setVisibility(View.INVISIBLE);
+            email.setVisibility(View.INVISIBLE);
+            addr.setVisibility(View.INVISIBLE);
+            ok.setVisibility(View.INVISIBLE);
+            oknt.setVisibility(View.INVISIBLE);
+            req.setVisibility(View.INVISIBLE);
+
+
+
         }
+
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.edit().putString("regdone", "false").apply();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+
+        oknt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.edit().putString("regdone", "false").apply();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
     }
+
+
 
 }
