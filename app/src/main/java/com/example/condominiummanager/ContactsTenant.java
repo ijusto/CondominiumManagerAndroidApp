@@ -28,6 +28,23 @@ public class ContactsTenant extends AppCompatActivity {
             }
         });
 
+        final ImageView chat_manager = findViewById(R.id.chat_contact_manager);
+        final ImageView chat_maintenance = findViewById(R.id.chat_contact_maintenance);
+        chat_manager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), PrivateChat.class);
+                startActivity(i);
+            }
+        });
+        chat_maintenance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), PrivateChat.class);
+                startActivity(i);
+            }
+        });
+
     }
 
 }

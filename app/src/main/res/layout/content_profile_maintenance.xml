@@ -8,6 +8,19 @@
     tools:context=".profile_maintenance"
     tools:showIn="@layout/activity_profile_maintenance">
 
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:text="Profile"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/go_back_profile_maintenance"
         android:layout_width="wrap_content"
@@ -26,9 +39,9 @@
         android:layout_width="78dp"
         android:layout_height="69dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView36"
         app:srcCompat="@mipmap/maintenance_profile_pic"
         tools:srcCompat="@mipmap/maintenance_profile_pic" />
 
@@ -37,7 +50,7 @@
         android:layout_width="268dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
         android:gravity="center"
         android:text="Pedro Miguel da Silva Marques"
@@ -45,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
         <TextView
             android:id="@+id/textView19"

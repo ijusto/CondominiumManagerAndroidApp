@@ -54,4 +54,8 @@
     <string name="title_activity_task_list">TaskList</string>
     <string name="title_activity_task_tenant">TaskTenant</string>
     <string name="title_activity_chat">Chat</string>
+    <string name="title_activity_chat_tenant">ChatTenant</string>
+    <string name="title_activity_chat_manager">ChatManager</string>
+    <string name="title_activity_chat_maintenance">ChatMaintenance</string>
+    <string name="title_activity_private_chat">PrivateChat</string>
 </resources>

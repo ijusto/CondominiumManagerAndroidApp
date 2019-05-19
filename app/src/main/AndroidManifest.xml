@@ -10,13 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".Chat"
-            android:label="@string/title_activity_chat"
+            android:name=".PrivateChat"
+            android:label="@string/title_activity_private_chat"
             android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".ChatMaintenance"
+            android:label="@string/title_activity_chat_maintenance"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".ChatManager"
+            android:label="@string/title_activity_chat_manager"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".ChatTenant"
+            android:label="@string/title_activity_chat_tenant"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".TaskTenant"
             android:label="@string/title_activity_task_tenant"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".TaskList"
             android:label="@string/title_activity_task_list"

@@ -88,7 +88,7 @@ public class Maintenance extends AppCompatActivity {
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Chat.class);
+                Intent i = new Intent(getApplicationContext(), ChatMaintenance.class);
                 startActivity(i);
             }
         });
