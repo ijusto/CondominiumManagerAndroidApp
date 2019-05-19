@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Floors">
+        <item>1º Direito</item>
+        <item>1º Esquerdo</item>
+        <item>2º Direito</item>
+        <item>2º Esquerdo</item>
+        <item>3º Direito</item>
+        <item>3º Esquerdo</item>
+    </string-array>
+
+    <string-array name="condonames">
+        <item>Rua da Bacalhoa</item>
+    </string-array>
+
+
+</resources>
