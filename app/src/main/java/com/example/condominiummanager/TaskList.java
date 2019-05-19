@@ -34,6 +34,9 @@ public class TaskList extends AppCompatActivity {
             }
         });
 
+
+
+
         if (prefs.getString("reportDone", "false").equals("true")){
             CheckBox task = findViewById(R.id.tasktoadd);
             task.setText(prefs.getString("reporttitle", "Something wrong some place"));
