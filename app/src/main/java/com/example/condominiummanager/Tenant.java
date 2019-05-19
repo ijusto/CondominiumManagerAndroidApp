@@ -25,6 +25,7 @@ public class Tenant extends AppCompatActivity {
         final ImageView payments = findViewById(R.id.payments);
         final ImageView profile = findViewById(R.id.profiletenant);
         final ImageView settings = findViewById(R.id.settings_tenant);
+        final ImageView chat = findViewById(R.id.chat_tenant);
 
 
         events.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +82,15 @@ public class Tenant extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Chat.class);
+                startActivity(i);
+            }
+        });
+
 
 
 

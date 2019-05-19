@@ -4,12 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactsMaintenance">
+    tools:context=".Chat">
 
-    <include
-        layout="@layout/content_contacts_maintenance"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+    <include layout="@layout/content_chat" />
 
 </android.support.design.widget.CoordinatorLayout>

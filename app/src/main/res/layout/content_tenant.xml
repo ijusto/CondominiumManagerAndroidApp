@@ -196,7 +196,7 @@
         app:srcCompat="@mipmap/settings_icon" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/chat_tenant"
         android:layout_width="54dp"
         android:layout_height="41dp"
         android:layout_marginStart="276dp"

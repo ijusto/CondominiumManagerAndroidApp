@@ -197,7 +197,7 @@
         app:srcCompat="@mipmap/settings_icon" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/chat_maintenance"
         android:layout_width="54dp"
         android:layout_height="41dp"
         android:layout_marginStart="276dp"
@@ -207,7 +207,7 @@
         app:layout_constraintBottom_toTopOf="@+id/condoselect"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/settings_tenant"
+        app:layout_constraintStart_toEndOf="@+id/settings_maintenance"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/chat_icon" />

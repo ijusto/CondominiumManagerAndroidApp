@@ -9,7 +9,140 @@
     tools:showIn="@layout/activity_contacts_manager">
 
     <ImageView
-        android:id="@+id/go_back_contacts_manager"
+        android:id="@+id/chat_contact_maintenance"
+        android:layout_width="54dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/contact_name_maintenance"
+        app:layout_constraintTop_toTopOf="@+id/contact_name_maintenance"
+        app:srcCompat="@mipmap/chat_icon" />
+
+    <ImageView
+        android:id="@+id/chat_contact_tenant"
+        android:layout_width="54dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/contact_name_tenant"
+        app:layout_constraintTop_toTopOf="@+id/contact_name_tenant"
+        app:srcCompat="@mipmap/chat_icon" />
+
+    <TextView
+        android:id="@+id/contact_type_maintenance"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Maintenance"
+        app:layout_constraintStart_toEndOf="@+id/maintenance_pic"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_maintenance" />
+
+    <TextView
+        android:id="@+id/contact_phone_maintenance"
+        android:layout_width="104dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="-phone-"
+        app:layout_constraintStart_toEndOf="@+id/maintenance_pic"
+        app:layout_constraintTop_toBottomOf="@+id/contact_type_maintenance" />
+
+    <TextView
+        android:id="@+id/contact_FloorDoor_tenant"
+        android:layout_width="83dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="-Floor ...-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toEndOf="@+id/contact_type_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_tenant" />
+
+    <TextView
+        android:id="@+id/contact_email_maintenance"
+        android:layout_width="153dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="-email-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toEndOf="@+id/contact_phone_maintenance"
+        app:layout_constraintTop_toBottomOf="@+id/contact_FloorDoor_maintenance" />
+
+    <TextView
+        android:id="@+id/contact_email_tenant"
+        android:layout_width="153dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="-email-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toEndOf="@+id/contact_phone_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/contact_FloorDoor_tenant" />
+
+    <TextView
+        android:id="@+id/contact_FloorDoor_maintenance"
+        android:layout_width="83dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="-Floor ...-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.356"
+        app:layout_constraintStart_toEndOf="@+id/contact_type_maintenance"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_maintenance" />
+
+    <TextView
+        android:id="@+id/contact_phone_tenant"
+        android:layout_width="104dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="-phone-"
+        app:layout_constraintStart_toEndOf="@+id/tenant_pic"
+        app:layout_constraintTop_toBottomOf="@+id/contact_type_tenant" />
+
+    <TextView
+        android:id="@+id/contact_name_maintenance"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:text="Pedro Miguel da Silva Marques"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/maintenance_pic"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:text="Contacts"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/go_back_contacts_tenant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -22,28 +155,55 @@
         app:srcCompat="@mipmap/back_icon" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="89dp"
-        android:layout_height="89dp"
+        android:id="@+id/maintenance_pic"
+        android:layout_width="94dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30"
+        app:srcCompat="@mipmap/maintenance_profile_pic" />
+
+    <ImageView
+        android:id="@+id/tenant_pic"
+        android:layout_width="96dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_maintenance"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@mipmap/tenant_profile_pic" />
+
+    <TextView
+        android:id="@+id/contact_name_tenant"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:text="Joana Castelo-Branco"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/tenant_profile_pic" />
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/tenant_pic"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_maintenance"
+        app:layout_constraintVertical_bias="0.087" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="89dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@mipmap/maintenance_profile_pic" />
+    <TextView
+        android:id="@+id/contact_type_tenant"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Tenant"
+        app:layout_constraintStart_toEndOf="@+id/tenant_pic"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name_tenant" />
 </android.support.constraint.ConstraintLayout>
