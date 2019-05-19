@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".TaskTenant"
+            android:label="@string/title_activity_task_tenant"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
             android:name=".TaskList"
             android:label="@string/title_activity_task_list"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".reportEnd"
             android:label="@string/title_activity_report_end"
@@ -20,7 +24,7 @@
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".PaymentsTenant"
             android:label="@string/title_activity_payments_tenant"

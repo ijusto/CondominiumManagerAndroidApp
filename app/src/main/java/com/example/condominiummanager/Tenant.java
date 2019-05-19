@@ -38,7 +38,7 @@ public class Tenant extends AppCompatActivity {
         maintenance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), TaskList.class);
+                Intent i = new Intent(getApplicationContext(), TaskTenant.class);
                 startActivity(i);
             }
         });
