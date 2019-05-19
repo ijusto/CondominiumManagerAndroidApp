@@ -19,7 +19,7 @@ public class ProfileTenant extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final ImageView go_back = findViewById(R.id.go_back_payments_tenant);
+        final ImageView go_back = findViewById(R.id.go_back_profile_tenant);
 
         go_back.setOnClickListener(new View.OnClickListener() {
             @Override
