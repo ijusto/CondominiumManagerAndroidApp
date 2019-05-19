@@ -53,9 +53,23 @@ public class Events extends AppCompatActivity {
                     if (year == 2019 && month == 4 && dayOfMonth == 22){
                         details.setVisibility(View.VISIBLE);
                         going.setVisibility(View.VISIBLE);
-                        if(prefs.getString("checked","false").equals("true")){
-                            going.setChecked(true);
+                        String username = prefs.getString("usernametext", "tenant");
+                        switch (username){
+                            case "tenant":
+                                if(prefs.getString("checkedtenant","false").equals("true")){
+                                    going.setChecked(true);
+                                }break;
+                            case "maintenance":
+                                if(prefs.getString("checkedmaintenance","false").equals("true")){
+                                    going.setChecked(true);
+                                }break;
+                            case "manager":
+                                if(prefs.getString("checkedmanager","false").equals("true")){
+                                    going.setChecked(true);
+                                }break;
+
                         }
+
                     }else{
                         details.setVisibility(View.INVISIBLE);
                         going.setVisibility(View.INVISIBLE);
@@ -69,9 +83,33 @@ public class Events extends AppCompatActivity {
                 @Override
                 public void onClick(View v){
                     if (going.isChecked()){
-                        prefs.edit().putString("checked","true").apply();
+                        String username = prefs.getString("usernametext", "tenant");
+                        switch (username) {
+                            case "tenant":
+                                prefs.edit().putString("checkedtenant", "true").apply();
+                                break;
+                            case "manager":
+                                prefs.edit().putString("checkedmanager", "true").apply();
+                                break;
+                            case "maintenance":
+                                prefs.edit().putString("checkedmaintenance", "true").apply();
+                                break;
+                        }
                     }else{
-                        prefs.edit().putString("checked","false").apply();
+
+                        String username = prefs.getString("usernametext", "tenant");
+
+                        switch (username) {
+                            case "tenant":
+                                prefs.edit().putString("checkedtenant", "false").apply();
+                                break;
+                            case "manager":
+                                prefs.edit().putString("checkedmanager", "false").apply();
+                                break;
+                            case "maintenance":
+                                prefs.edit().putString("checkedmaintenance", "false").apply();
+                                break;
+                        }
                     }
                 }
             });

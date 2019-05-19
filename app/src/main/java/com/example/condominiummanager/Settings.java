@@ -1,6 +1,8 @@
 package com.example.condominiummanager;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -25,6 +27,8 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", Context.MODE_PRIVATE);
+
 
         final ImageView go_back = findViewById(R.id.go_back_settings);
 
@@ -48,9 +52,33 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(email_privacy.isChecked()){
+                    String username = prefs.getString("usernametext", "tenant");
+                    switch (username) {
+                        case "tenant":
+                            prefs.edit().putString("tenantemail", "true").apply();
+                            break;
+                        case "manager":
+                            prefs.edit().putString("manageremail", "true").apply();
+                            break;
+                        case "maintenance":
+                            prefs.edit().putString("maintenanceemail", "true").apply();
+                            break;
+                    }
                     public_email.setImageResource(R.mipmap.public_enable_icon);
                     privacy_email.setImageResource(R.mipmap.private_disable_icon);
                 }else{
+                    String username = prefs.getString("usernametext", "tenant");
+                    switch (username) {
+                        case "tenant":
+                            prefs.edit().putString("tenantemail", "false").apply();
+                            break;
+                        case "manager":
+                            prefs.edit().putString("manageremail", "false").apply();
+                            break;
+                        case "maintenance":
+                            prefs.edit().putString("maintenanceemail", "false").apply();
+                            break;
+                    }
                     public_email.setImageResource(R.mipmap.public_disable_icon);
                     privacy_email.setImageResource(R.mipmap.private_enable_icon);
                 }
@@ -61,9 +89,34 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(mobile_privacy.isChecked()){
+                    String username = prefs.getString("usernametext", "tenant");
+                    switch (username) {
+                        case "tenant":
+                            prefs.edit().putString("tenantmobile", "true").apply();
+                            break;
+                        case "manager":
+                            prefs.edit().putString("managermobile", "true").apply();
+                            break;
+                        case "maintenance":
+                            prefs.edit().putString("maintenancemobile", "true").apply();
+                            break;
+                    }
                     public_mobile.setImageResource(R.mipmap.public_enable_icon);
                     privacy_mobile.setImageResource(R.mipmap.private_disable_icon);
                 }else{
+                    String username = prefs.getString("usernametext", "tenant");
+                    switch (username) {
+                        case "tenant":
+                            prefs.edit().putString("tenantmobile", "false").apply();
+                            break;
+                        case "manager":
+                            prefs.edit().putString("managermobile", "false").apply();
+                            break;
+                        case "maintenance":
+                            prefs.edit().putString("maintenancemobile", "false").apply();
+                            break;
+                    }
+
                     public_mobile.setImageResource(R.mipmap.public_disable_icon);
                     privacy_mobile.setImageResource(R.mipmap.private_enable_icon);
                 }
