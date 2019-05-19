@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 import com.example.condominiummanager.ui.login.LoginActivity;
 
+import org.w3c.dom.Text;
+
 import java.util.Objects;
 
 public class Events extends AppCompatActivity {
@@ -32,6 +34,7 @@ public class Events extends AppCompatActivity {
 
         FloatingActionButton addevent = findViewById(R.id.addEvent);
 
+
         addevent.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -41,6 +44,8 @@ public class Events extends AppCompatActivity {
         });
 
         if(prefs.getString("done", "false").equals("true")){
+            final TextView whois = findViewById(R.id.whosgoing);
+            whois.setText(prefs.getString("whoistr", ""));
 
             showevent();
             CalendarView calendar = findViewById(R.id.calendarView);
@@ -50,9 +55,11 @@ public class Events extends AppCompatActivity {
                 public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
                     TextView details = findViewById(R.id.detailstwenty);
                     CheckBox going = findViewById(R.id.goingevent);
+
                     if (year == 2019 && month == 4 && dayOfMonth == 22){
                         details.setVisibility(View.VISIBLE);
                         going.setVisibility(View.VISIBLE);
+                        whois.setVisibility(View.VISIBLE);
                         String username = prefs.getString("usernametext", "tenant");
                         switch (username){
                             case "tenant":
@@ -82,32 +89,55 @@ public class Events extends AppCompatActivity {
             going.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
+                    TextView whois = findViewById(R.id.whosgoing);
                     if (going.isChecked()){
+                        String whoistr = "";
                         String username = prefs.getString("usernametext", "tenant");
                         switch (username) {
                             case "tenant":
                                 prefs.edit().putString("checkedtenant", "true").apply();
+                                whoistr = prefs.getString("whoistr", "");
+                                prefs.edit().putString("whoistr", whoistr + "  Joana Castelo-Branco  ").apply();
+                                whois.setText(prefs.getString("whoistr", ""));
                                 break;
                             case "manager":
                                 prefs.edit().putString("checkedmanager", "true").apply();
+                                whoistr = prefs.getString("whoistr", "");
+                                prefs.edit().putString("whoistr", whoistr + "  Joaquim Inácio  ").apply();
+                                whois.setText(prefs.getString("whoistr", ""));
                                 break;
                             case "maintenance":
                                 prefs.edit().putString("checkedmaintenance", "true").apply();
+                                whoistr = prefs.getString("whoistr", "");
+                                prefs.edit().putString("whoistr", whoistr + "  Pedro Marques  ").apply();
+                                whois.setText(prefs.getString("whoistr", ""));
                                 break;
                         }
                     }else{
-
+                        String whoistr = "";
                         String username = prefs.getString("usernametext", "tenant");
 
                         switch (username) {
                             case "tenant":
                                 prefs.edit().putString("checkedtenant", "false").apply();
+                                whoistr = prefs.getString("whoistr", "");
+                                whoistr = whoistr.replace("  Joana Castelo-Branco  ", "");
+                                prefs.edit().putString("whoistr", whoistr).apply();
+                                whois.setText(prefs.getString("whoistr", ""));
                                 break;
                             case "manager":
                                 prefs.edit().putString("checkedmanager", "false").apply();
+                                whoistr = prefs.getString("whoistr", "");
+                                whoistr = whoistr.replace("  Joaquim Inácio  ", "");
+                                prefs.edit().putString("whoistr", whoistr).apply();
+                                whois.setText(prefs.getString("whoistr", ""));
                                 break;
                             case "maintenance":
                                 prefs.edit().putString("checkedmaintenance", "false").apply();
+                                whoistr = prefs.getString("whoistr", "");
+                                whoistr = whoistr.replace("  Pedro Marques  ", "");
+                                prefs.edit().putString("whoistr", whoistr).apply();
+                                whois.setText(prefs.getString("whoistr", ""));
                                 break;
                         }
                     }
@@ -125,6 +155,8 @@ public class Events extends AppCompatActivity {
             });
 
         }
+
+
 
 
 
