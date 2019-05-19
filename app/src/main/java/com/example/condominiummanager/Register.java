@@ -45,19 +45,22 @@ public class Register extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                TextView name = findViewById(R.id.fullname);
+                TextView addr = findViewById(R.id.addressreg);
+                TextView email = findViewById(R.id.email);
+
+                prefs.edit().putString("namereg", name.getText().toString()).apply();
+                prefs.edit().putString("addrreg", addr.getText().toString()).apply();
+                prefs.edit().putString("emailreg", email.getText().toString()).apply();
+                prefs.edit().putString("regdone", "true").apply();
+
                 startActivity(new Intent(getApplicationContext(), Thankyou.class));
             }
         });
 
 
 
-        TextView name = findViewById(R.id.fullname);
-        TextView addr = findViewById(R.id.addressreg);
-        TextView email = findViewById(R.id.email);
 
-        prefs.edit().putString("name", name.getText().toString()).apply();
-        prefs.edit().putString("addr", addr.getText().toString()).apply();
-        prefs.edit().putString("email", email.getText().toString()).apply();
 
 
 

@@ -54,4 +54,5 @@
     <string name="title_activity_task_list">TaskList</string>
     <string name="title_activity_task_tenant">TaskTenant</string>
     <string name="title_activity_chat">Chat</string>
+    <string name="title_activity_requests">Requests</string>
 </resources>

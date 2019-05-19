@@ -10,13 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".Requests"
+            android:label="@string/title_activity_requests"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
             android:name=".Chat"
             android:label="@string/title_activity_chat"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".TaskTenant"
             android:label="@string/title_activity_task_tenant"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".TaskList"
             android:label="@string/title_activity_task_list"

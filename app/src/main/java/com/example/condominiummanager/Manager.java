@@ -28,6 +28,7 @@ public class Manager extends AppCompatActivity {
         final ImageView profile = findViewById(R.id.profilemanager);
         final ImageView settings = findViewById(R.id.settings_manager);
         final ImageView chat = findViewById(R.id.chat_manager);
+        final ImageView invitation = findViewById(R.id.invitation);
 
 
         events.setOnClickListener(new View.OnClickListener() {
@@ -96,13 +97,13 @@ public class Manager extends AppCompatActivity {
         });
 
         //TODO implement invitation
-        /*invitations.setOnClickListener(new View.OnClickListener() {
+        invitation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Invitations.class);
+                Intent i = new Intent(getApplicationContext(), Requests.class);
                 startActivity(i);
             }
-        });*/
+        });
 
 
 
