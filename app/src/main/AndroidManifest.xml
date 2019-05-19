@@ -26,6 +26,10 @@
             android:label="@string/title_activity_chat_tenant"
             android:theme="@style/NoActionBar" />
         <activity
+            android:name=".Requests"
+            android:label="@string/title_activity_requests"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
             android:name=".TaskTenant"
             android:label="@string/title_activity_task_tenant"
             android:theme="@style/NoActionBar" />

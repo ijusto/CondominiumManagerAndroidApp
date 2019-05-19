@@ -1,6 +1,7 @@
 package com.example.condominiummanager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,6 +22,8 @@ public class ProfileManager extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominuiummanager", MODE_PRIVATE);
+
         final ImageView go_back = findViewById(R.id.go_back_profile_manager);
 
         go_back.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +35,12 @@ public class ProfileManager extends AppCompatActivity {
         });
 
         final Button edit = findViewById(R.id.edit);
+
+        TextView emailtext = findViewById(R.id.emailtext_manager);
+        TextView mobiletext = findViewById(R.id.mobiletext_manager);
+
+        emailtext.setText(prefs.getString("manageremail", "joaquim_inac@sapo.pt"));
+        mobiletext.setText(prefs.getString("managermobile", "919999123"));
 
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +73,8 @@ public class ProfileManager extends AppCompatActivity {
 
                     String email = editmail.getText().toString();
                     String mobile = editmobile.getText().toString();
+                    prefs.edit().putString("managermail",email).apply();
+                    prefs.edit().putString("managermobile",mobile).apply();
                     emailtext.setText(email);
                     mobiletext.setText(mobile);
                     emailtext.setVisibility(View.VISIBLE);

@@ -1,6 +1,7 @@
 package com.example.condominiummanager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,6 +21,8 @@ public class profile_maintenance extends AppCompatActivity {
         setContentView(R.layout.activity_profile_maintenance);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominuiummanager", MODE_PRIVATE);
+
 
         final ImageView go_back = findViewById(R.id.go_back_profile_maintenance);
 
@@ -32,6 +35,14 @@ public class profile_maintenance extends AppCompatActivity {
         });
 
         final Button edit = findViewById(R.id.edit);
+
+
+        TextView emailtext = findViewById(R.id.emailtext_maintenance);
+        TextView mobiletext = findViewById(R.id.mobiletext_maintenance);
+
+        emailtext.setText(prefs.getString("maintenanceemail", "pedromarques@sapo.pt"));
+        mobiletext.setText(prefs.getString("maintenancemobile", "919994524"));
+
 
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +77,8 @@ public class profile_maintenance extends AppCompatActivity {
                     String mobile = editmobile.getText().toString();
                     emailtext.setText(email);
                     mobiletext.setText(mobile);
+                    prefs.edit().putString("maintenanceemail",email).apply();
+                    prefs.edit().putString("maitenancemobile",mobile).apply();
                     emailtext.setVisibility(View.VISIBLE);
                     editmail.setVisibility(View.INVISIBLE);
                     mobiletext.setVisibility(View.VISIBLE);

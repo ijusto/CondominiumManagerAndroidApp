@@ -1,6 +1,8 @@
 package com.example.condominiummanager;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,6 +20,7 @@ public class ProfileTenant extends AppCompatActivity {
         setContentView(R.layout.activity_profile_tenant);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", Context.MODE_PRIVATE);
 
         final ImageView go_back = findViewById(R.id.go_back_profile_tenant);
 
@@ -30,6 +33,14 @@ public class ProfileTenant extends AppCompatActivity {
         });
 
         final Button edit = findViewById(R.id.edit);
+
+
+
+        TextView emailtext = findViewById(R.id.emailtext);
+        TextView mobiletext = findViewById(R.id.mobiletext);
+
+        emailtext.setText(prefs.getString("tenantemail", "jcb@sapo.pt"));
+        mobiletext.setText(prefs.getString("tenantmobile", "919999999"));
 
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +73,8 @@ public class ProfileTenant extends AppCompatActivity {
 
                     String email = editmail.getText().toString();
                     String mobile = editmobile.getText().toString();
+                    prefs.edit().putString("tenantemail",email).apply();
+                    prefs.edit().putString("tenantmobile",mobile).apply();
                     emailtext.setText(email);
                     mobiletext.setText(mobile);
                     emailtext.setVisibility(View.VISIBLE);
