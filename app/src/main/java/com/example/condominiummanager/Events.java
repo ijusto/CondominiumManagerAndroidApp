@@ -34,6 +34,10 @@ public class Events extends AppCompatActivity {
 
         FloatingActionButton addevent = findViewById(R.id.addEvent);
 
+        CalendarView calendars = findViewById(R.id.calendarView);
+
+        calendars.setFirstDayOfWeek(1);
+
 
         addevent.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -55,11 +59,14 @@ public class Events extends AppCompatActivity {
                 public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
                     TextView details = findViewById(R.id.detailstwenty);
                     CheckBox going = findViewById(R.id.goingevent);
+                    TextView top = findViewById(R.id.whosgoing_lol);
 
                     if (year == 2019 && month == 4 && dayOfMonth == 22){
                         details.setVisibility(View.VISIBLE);
                         going.setVisibility(View.VISIBLE);
                         whois.setVisibility(View.VISIBLE);
+                        top.setVisibility(View.VISIBLE);
+
                         String username = prefs.getString("usernametext", "tenant");
                         switch (username){
                             case "tenant":
@@ -80,6 +87,8 @@ public class Events extends AppCompatActivity {
                     }else{
                         details.setVisibility(View.INVISIBLE);
                         going.setVisibility(View.INVISIBLE);
+                        whois.setVisibility(View.INVISIBLE);
+                        top.setVisibility(View.INVISIBLE);
                     }
 
                 }
