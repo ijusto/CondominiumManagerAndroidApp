@@ -8,6 +8,45 @@
     tools:context=".ChatMaintenance"
     tools:showIn="@layout/activity_chat_maintenance">
 
+    <TextView
+        android:id="@+id/maintenance_chat_tenant_text_content"
+        android:layout_width="253dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="You: Boa tarde, Pedro. Será que me podia verificar as leituras ..."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/maintenance_chat_tenant_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/maintenance_chat_tenant_pic"
+        app:layout_constraintTop_toBottomOf="@+id/maintenance_chat_tenant_name" />
+
+    <TextView
+        android:id="@+id/maintenance_chat_tenant_name"
+        android:layout_width="253dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Joana Castelo-Branco"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/maintenance_chat_tenant_pic"
+        app:layout_constraintTop_toTopOf="@+id/maintenance_chat_tenant_pic" />
+
+    <ImageView
+        android:id="@+id/maintenance_chat_manager_pic"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maintenance_chat_tenant_pic"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/manager_profile_pic" />
+
     <ImageView
         android:id="@+id/go_back_chat_maintenance"
         android:layout_width="wrap_content"
@@ -33,4 +72,62 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="269dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="157dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="381dp" />
+
+    <ImageView
+        android:id="@+id/maintenance_chat_tenant_pic"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29"
+        app:srcCompat="@mipmap/tenant_profile_pic" />
+
+    <TextView
+        android:id="@+id/maintenance_chat_manager_name"
+        android:layout_width="253dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Joaquim Inácio"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/maintenance_chat_manager_pic"
+        app:layout_constraintTop_toTopOf="@+id/maintenance_chat_manager_pic" />
+
+    <TextView
+        android:id="@+id/maintenance_chat_manager_text_content"
+        android:layout_width="253dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Rendimento pago. Bom Domingo."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/maintenance_chat_manager_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/maintenance_chat_manager_pic"
+        app:layout_constraintTop_toBottomOf="@+id/maintenance_chat_manager_name" />
 </android.support.constraint.ConstraintLayout>

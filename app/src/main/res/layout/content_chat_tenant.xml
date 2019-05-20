@@ -8,6 +8,34 @@
     tools:context=".ChatTenant"
     tools:showIn="@layout/activity_chat_tenant">
 
+    <TextView
+        android:id="@+id/tenant_chat_maintenance_name"
+        android:layout_width="253dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Pedro Marques"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tenant_chat_maintenance_pic"
+        app:layout_constraintTop_toTopOf="@+id/tenant_chat_maintenance_pic" />
+
+    <TextView
+        android:id="@+id/tenant_chat_manager_name"
+        android:layout_width="253dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Joaquim Inácio"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tenant_chat_manager_pic"
+        app:layout_constraintTop_toTopOf="@+id/tenant_chat_manager_pic" />
+
     <ImageView
         android:id="@+id/go_back_chat_tenant"
         android:layout_width="wrap_content"
@@ -33,4 +61,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="157dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="269dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="381dp" />
+
+    <ImageView
+        android:id="@+id/tenant_chat_manager_pic"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32"
+        app:srcCompat="@mipmap/manager_profile_pic" />
+
+    <ImageView
+        android:id="@+id/tenant_chat_maintenance_pic"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_chat_manager_pic"
+        app:layout_constraintVertical_bias="0.006"
+        app:srcCompat="@mipmap/maintenance_profile_pic" />
 </android.support.constraint.ConstraintLayout>
