@@ -56,37 +56,36 @@ public class ContactsMaintenance extends AppCompatActivity {
 
         tenantemail.setText(prefs.getString("tenantemail", "something wrong"));
         manageremail.setText(prefs.getString("manageremail", "something wrong"));
+
+
         if (prefs.getString("tenantemailprivacy", "false").equals("false")) {
             tenantemail.setVisibility(View.INVISIBLE);
+        }else if(prefs.getString("tenantemailprivacy", "false").equals("true")){
+            tenantemail.setVisibility(View.VISIBLE);
         }
+
         if (prefs.getString("manageremailprivacy", "false").equals("false")) {
-            tenantemail.setVisibility(View.INVISIBLE);
+            manageremail.setVisibility(View.INVISIBLE);
+        }else if(prefs.getString("manageremailprivacy", "false").equals("true")) {
+            manageremail.setVisibility(View.VISIBLE);
         }
+
+        if (prefs.getString("tenantmobileprivacy", "false").equals("false")) {
+            tenantmobile.setVisibility(View.INVISIBLE);
+        }else if(prefs.getString("tenantmobileprivacy", "false").equals("true")){
+            tenantmobile.setVisibility(View.VISIBLE);
+        }
+
+        if (prefs.getString("managermobileprivacy", "false").equals("false")) {
+            managermobile.setVisibility(View.INVISIBLE);
+        }else if(prefs.getString("managermobileprivacy", "false").equals("true")) {
+            managermobile.setVisibility(View.VISIBLE);
+        }
+
+
 
 
 
     }
 
-    @Override
-    protected void onStart() {
-        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", MODE_PRIVATE);
-        super.onStart();
-        final TextView tenantmobile = findViewById(R.id.contact_phone_tenant);
-        final TextView managermobile = findViewById(R.id.contact_phone_manager);
-
-        tenantmobile.setText(prefs.getString("tenantmobile", "something wrong"));
-        managermobile.setText(prefs.getString("managermobile", "something wrong"));
-
-        final TextView tenantemail = findViewById(R.id.contact_email_tenant);
-        final TextView manageremail = findViewById(R.id.contact_email_manager);
-
-        tenantemail.setText(prefs.getString("tenantemail", "something wrong"));
-        manageremail.setText(prefs.getString("manageremail", "something wrong"));
-        if (prefs.getString("tenantemailprivacy", "false").equals("false")) {
-            tenantemail.setVisibility(View.INVISIBLE);
-        }
-        if (prefs.getString("manageremailprivacy", "false").equals("false")) {
-            tenantemail.setVisibility(View.INVISIBLE);
-        }
-    }
 }

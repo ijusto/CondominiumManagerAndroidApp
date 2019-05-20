@@ -20,7 +20,7 @@ public class ProfileManager extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominuiummanager", MODE_PRIVATE);
+        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", MODE_PRIVATE);
 
         final ImageView go_back = findViewById(R.id.go_back_profile_manager);
 
