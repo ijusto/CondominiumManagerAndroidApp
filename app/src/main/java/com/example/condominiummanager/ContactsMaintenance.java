@@ -2,6 +2,7 @@ package com.example.condominiummanager;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -33,6 +34,8 @@ public class ContactsMaintenance extends AppCompatActivity {
         chat_manager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prefs.edit().putString("chatname", "Joaquim Inácio").apply();
+                prefs.edit().putString("chatto", "manager" ).apply();
                 Intent i = new Intent(getApplicationContext(), PrivateChat.class);
                 startActivity(i);
             }
@@ -40,6 +43,8 @@ public class ContactsMaintenance extends AppCompatActivity {
         chat_tenant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prefs.edit().putString("chatname", "Joana Castelo-Branco").apply();
+                prefs.edit().putString("chatto", "tenant" ).apply();
                 Intent i = new Intent(getApplicationContext(), PrivateChat.class);
                 startActivity(i);
             }
@@ -81,6 +86,9 @@ public class ContactsMaintenance extends AppCompatActivity {
         }else if(prefs.getString("managermobileprivacy", "false").equals("true")) {
             managermobile.setVisibility(View.VISIBLE);
         }
+
+
+
 
 
 

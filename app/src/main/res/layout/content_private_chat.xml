@@ -90,7 +90,7 @@
         app:srcCompat="@android:color/white" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/answerchat"
         android:layout_width="308dp"
         android:layout_height="51dp"
         android:layout_marginStart="20dp"
@@ -105,7 +105,7 @@
         app:layout_constraintVertical_bias="0.666" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/replybutton"
         android:layout_width="53dp"
         android:layout_height="51dp"
         android:layout_marginStart="8dp"
@@ -119,7 +119,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
-        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/answerchat"
         app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
 </android.support.constraint.ConstraintLayout>

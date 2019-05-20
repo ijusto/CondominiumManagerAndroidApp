@@ -54,10 +54,25 @@ public class Events extends AppCompatActivity {
         final EditText event_desc_input = findViewById(R.id.event_desc_input);
         final EditText event_name_input = findViewById(R.id.event_name_input);
         final EditText event_hour_input = findViewById(R.id.event_hour_input);
+        final IntWrapper day = new IntWrapper(0);
+        final IntWrapper monthwrap = new IntWrapper(0);
+        final IntWrapper yearwrap  = new IntWrapper(0);
+
+        calendars.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+                final int[] date = {dayOfMonth, month, year};
+                day.value = dayOfMonth;
+                monthwrap.value = month + 1;
+                yearwrap.value = year;
+            }
+        });
+
 
         addevent.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                day_info.setText("Date:  " + day.value + "/" + monthwrap.value + "/" + yearwrap.value);
                 add_event_rect_info.setVisibility(View.VISIBLE);
                 day_info.setVisibility(View.VISIBLE);
                 event_name.setVisibility(View.VISIBLE);
@@ -68,6 +83,7 @@ public class Events extends AppCompatActivity {
                 event_hour_input.setVisibility(View.VISIBLE);
                 addevent.setVisibility((View.INVISIBLE));
                 checkevent.setVisibility((View.VISIBLE));
+
             }
         });
 
@@ -234,4 +250,18 @@ public class Events extends AppCompatActivity {
         }
     }
 
+    public class IntWrapper{
+        public int value;
+
+        public IntWrapper(int value) {
+            this.value = value;
+        }
+
+
+
+    }
+
 }
+
+
+

@@ -35,6 +35,8 @@ public class contacts_manager extends AppCompatActivity {
         chat_maintenance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prefs.edit().putString("chatname", "Pedro Marques").apply();
+                prefs.edit().putString("chatto", "maintenance" ).apply();
                 Intent i = new Intent(getApplicationContext(), PrivateChat.class);
                 startActivity(i);
             }
@@ -42,6 +44,8 @@ public class contacts_manager extends AppCompatActivity {
         chat_tenant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prefs.edit().putString("chatname", "Joana Castelo-Branco").apply();
+                prefs.edit().putString("chatto", "tenant" ).apply();
                 Intent i = new Intent(getApplicationContext(), PrivateChat.class);
                 startActivity(i);
             }
