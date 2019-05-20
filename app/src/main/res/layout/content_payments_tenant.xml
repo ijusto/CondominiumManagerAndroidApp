@@ -47,7 +47,7 @@
         app:srcCompat="@mipmap/back_icon" />
 
     <TextView
-        android:id="@+id/first_payment_tenant_title"
+        android:id="@+id/second_payment_tenant_title"
         android:layout_width="221dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -71,7 +71,7 @@
         android:scaleY="2"
         android:textColor="@color/ic_launcher_background"
         app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
-        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title" />
+        app:layout_constraintTop_toBottomOf="@+id/second_payment_tenant_title" />
 
     <ImageView
         android:id="@+id/delete_payment_tenant"
@@ -80,7 +80,7 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="64dp"
         app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
-        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title"
+        app:layout_constraintTop_toBottomOf="@+id/second_payment_tenant_title"
         app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <TextView
@@ -94,24 +94,6 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
         app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
-        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title" />
+        app:layout_constraintTop_toBottomOf="@+id/second_payment_tenant_title" />
 
-    <ImageView
-        android:id="@+id/check_payment"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="8dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/add_payment"
-        app:srcCompat="@mipmap/check_button" />
-
-    <ImageView
-        android:id="@+id/add_payment"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@mipmap/add_button" />
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,5 @@
 package com.example.condominiummanager;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -39,8 +38,8 @@ public class PaymentsManager extends AppCompatActivity {
             public void onClick(View v) {
                 if(payment.isChecked()){
                     prefs.edit().putString("tenant_payment", "true").apply();
-                    TextView text1 = findViewById(R.id.first_payment_tenant_title3);
-                    TextView text2 = findViewById(R.id.manager_payment_value);
+                    TextView text1 = findViewById(R.id.first_payment_tenant_title);
+                    TextView text2 = findViewById(R.id.manager_second_payment_value);
 
                     text1.setTextColor(Color.GREEN);
                     text2.setTextColor(Color.GREEN);
@@ -48,8 +47,8 @@ public class PaymentsManager extends AppCompatActivity {
 
                 }else{
                     prefs.edit().putString("tenant_payment", "false").apply();
-                    TextView text1 = findViewById(R.id.first_payment_tenant_title3);
-                    TextView text2 = findViewById(R.id.manager_payment_value);
+                    TextView text1 = findViewById(R.id.first_payment_tenant_title);
+                    TextView text2 = findViewById(R.id.manager_second_payment_value);
 
                     text1.setTextColor(Color.WHITE);
                     text2.setTextColor(Color.WHITE);
@@ -59,16 +58,16 @@ public class PaymentsManager extends AppCompatActivity {
         });
 
         if(prefs.getString("tenant_payment", "").equals("true")){
-            TextView text1 = findViewById(R.id.first_payment_tenant_title3);
-            TextView text2 = findViewById(R.id.manager_payment_value);
+            TextView text1 = findViewById(R.id.first_payment_tenant_title);
+            TextView text2 = findViewById(R.id.manager_second_payment_value);
 
             text1.setTextColor(Color.GREEN);
             text2.setTextColor(Color.GREEN);
             payment.setChecked(true);
 
         }else{
-            TextView text1 = findViewById(R.id.first_payment_tenant_title3);
-            TextView text2 = findViewById(R.id.manager_payment_value);
+            TextView text1 = findViewById(R.id.first_payment_tenant_title);
+            TextView text2 = findViewById(R.id.manager_second_payment_value);
 
             text1.setTextColor(Color.WHITE);
             text2.setTextColor(Color.WHITE);
@@ -78,12 +77,12 @@ public class PaymentsManager extends AppCompatActivity {
         }
 
 
-        final ImageView delete = findViewById(R.id.delete_manager_payment);
+        final ImageView delete = findViewById(R.id.delete_manager_second_payment);
 
         if(prefs.getString("delete_payment_manager","false").equals("true")){
-            TextView text1 = findViewById(R.id.first_payment_tenant_title3);
-            TextView text2 = findViewById(R.id.manager_payment_value);
-            ImageView block = findViewById(R.id.first_payment_tenant3);
+            TextView text1 = findViewById(R.id.first_payment_tenant_title);
+            TextView text2 = findViewById(R.id.manager_second_payment_value);
+            ImageView block = findViewById(R.id.first_payment_tenant);
 
             text1.setVisibility(View.INVISIBLE);
             text2.setVisibility(View.INVISIBLE);
@@ -96,9 +95,9 @@ public class PaymentsManager extends AppCompatActivity {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView text1 = findViewById(R.id.first_payment_tenant_title3);
-                TextView text2 = findViewById(R.id.manager_payment_value);
-                ImageView block = findViewById(R.id.first_payment_tenant3);
+                TextView text1 = findViewById(R.id.first_payment_tenant_title);
+                TextView text2 = findViewById(R.id.manager_second_payment_value);
+                ImageView block = findViewById(R.id.first_payment_tenant);
 
                 text1.setVisibility(View.INVISIBLE);
                 text2.setVisibility(View.INVISIBLE);

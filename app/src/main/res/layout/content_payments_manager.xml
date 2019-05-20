@@ -9,7 +9,7 @@
     tools:showIn="@layout/activity_payments_manager">
 
     <ImageView
-        android:id="@+id/first_payment_tenant3"
+        android:id="@+id/first_payment_tenant"
         android:layout_width="296dp"
         android:layout_height="171dp"
         android:layout_marginStart="8dp"
@@ -19,16 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView34" />
-
-    <ImageView
-        android:id="@+id/delete_manager_payment"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="64dp"
-        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant3"
-        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title3"
-        app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <CheckBox
         android:id="@+id/payment_manager"
@@ -40,8 +30,83 @@
         android:scaleX="2"
         android:scaleY="2"
         android:textColor="@color/ic_launcher_background"
-        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant3"
-        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title3" />
+        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title" />
+
+    <ImageView
+        android:id="@+id/second_payment_tenant"
+        android:layout_width="296dp"
+        android:layout_height="171dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="#3D93CC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant" />
+
+    <ImageView
+        android:id="@+id/delete_manager_second_payment"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="@+id/second_payment_tenant"
+        app:layout_constraintTop_toTopOf="@+id/manager_second_payment_value"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <ImageView
+        android:id="@+id/delete_manager_payment"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <CheckBox
+        android:id="@+id/second_payment_manager"
+        android:layout_width="32dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:textColor="@color/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="@+id/second_payment_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/second_payment_tenant_title" />
+
+    <TextView
+        android:id="@+id/second_payment_tenant_title"
+        android:layout_width="221dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Quotas Maio Joana"
+        android:textAlignment="center"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toTopOf="@+id/second_payment_tenant" />
+
+    <TextView
+        android:id="@+id/manager_second_payment_value"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="60€"
+        android:textAlignment="center"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/second_payment_tenant"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/second_payment_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/second_payment_tenant_title" />
 
     <TextView
         android:id="@+id/manager_payment_value"
@@ -52,13 +117,13 @@
         android:textAlignment="center"
         android:textColor="@color/ic_launcher_background"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant3"
+        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant3"
-        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title3" />
+        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title" />
 
     <TextView
-        android:id="@+id/first_payment_tenant_title3"
+        android:id="@+id/first_payment_tenant_title"
         android:layout_width="221dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -67,9 +132,9 @@
         android:textAlignment="center"
         android:textColor="@color/ic_launcher_background"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant3"
-        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant3"
-        app:layout_constraintTop_toTopOf="@+id/first_payment_tenant3" />
+        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
+        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toTopOf="@+id/first_payment_tenant" />
 
     <TextView
         android:id="@+id/textView34"
