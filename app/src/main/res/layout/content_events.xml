@@ -101,10 +101,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/detailstwenty"
         app:layout_constraintEnd_toEndOf="@+id/detailstwenty"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="@+id/detailstwenty"
         app:layout_constraintTop_toTopOf="@+id/detailstwenty"
-        app:layout_constraintVertical_bias="0.851" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <TextView
         android:id="@+id/whosgoing_lol"
@@ -198,8 +198,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/add_event_rect_info"
         app:layout_constraintEnd_toEndOf="@+id/add_event_rect_info"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="@+id/add_event_rect_info"
-        app:layout_constraintTop_toTopOf="@+id/goingevent" />
+        app:layout_constraintTop_toTopOf="@+id/goingevent"
+        app:layout_constraintVertical_bias="0.421" />
 
     <EditText
         android:id="@+id/event_name_input"
@@ -239,7 +241,6 @@
         android:id="@+id/add_button"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@mipmap/add_button" />
@@ -255,7 +256,9 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/goingevent"
-        app:layout_constraintHorizontal_bias="0.897"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/goingevent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

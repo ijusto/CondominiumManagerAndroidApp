@@ -75,7 +75,6 @@ public class Events extends AppCompatActivity {
                     final TextView whois = findViewById(R.id.whosgoing);
                     whois.setText(prefs.getString("whoistr", ""));
 
-                    showevent();
                     CalendarView calendar = findViewById(R.id.calendarView);
 
                     calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -85,7 +84,7 @@ public class Events extends AppCompatActivity {
                             TextView whosgo = findViewById(R.id.whosgoing_lol);
                             final CheckBox going = findViewById(R.id.goingevent);
                             TextView top = findViewById(R.id.whosgoing_lol);
-                            details.setText(event_name_input.getText().toString() + "\n" + event_desc_input.getText().toString() + "\n" + day_info.getText().toString());
+                            details.setText(event_name_input.getText().toString() + "\n" + event_desc_input.getText().toString() + "\n" + day_info.getText().toString() + "  " + event_hour_input.getText().toString());
                             TextView justgoing = findViewById(R.id.goingtextsimple);
                             if (year == chosenyear.value && month == chosenmonth.value && dayOfMonth == chosenday.value){
                                 details.setVisibility(View.VISIBLE);
@@ -234,12 +233,6 @@ public class Events extends AppCompatActivity {
 
 
 
-
-    }
-
-    private void showevent() {
-        final Button event = findViewById(R.id.eventbutton);
-        event.setVisibility(View.VISIBLE);
 
     }
 
