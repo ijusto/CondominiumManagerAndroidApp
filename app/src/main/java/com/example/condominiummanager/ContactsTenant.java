@@ -36,6 +36,7 @@ public class ContactsTenant extends AppCompatActivity {
             public void onClick(View v) {
                 prefs.edit().putString("chatname", "Joaquim Inácio").apply();
                 prefs.edit().putString("chatto", "manager" ).apply();
+                prefs.edit().putString("chathostid", "tenant" ).apply();
                 Intent i = new Intent(getApplicationContext(), PrivateChat.class);
                 startActivity(i);
             }
@@ -45,6 +46,7 @@ public class ContactsTenant extends AppCompatActivity {
             public void onClick(View v) {
                 prefs.edit().putString("chatname", "Pedro Marques").apply();
                 prefs.edit().putString("chatto", "maintenance" ).apply();
+                prefs.edit().putString("chathostid", "tenant" ).apply();
                 Intent i = new Intent(getApplicationContext(), PrivateChat.class);
                 startActivity(i);
             }

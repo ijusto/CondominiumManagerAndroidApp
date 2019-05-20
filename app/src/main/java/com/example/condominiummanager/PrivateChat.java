@@ -34,16 +34,62 @@ public class PrivateChat extends AppCompatActivity {
         ImageView chatimage = findViewById(R.id.chat_pic);
 
         String target = prefs.getString("chatto", "");
+        String host = prefs.getString("chathostid", "");
+
+
+        TextView first_text_maintenance_to_manager = findViewById(R.id.first_text_maintenance_to_manager);
+        TextView first_text_manager_to_maintenance = findViewById(R.id.first_text_manager_to_maintenance);
+        TextView first_text_tenant_to_manager = findViewById(R.id.first_text_tenant_to_manager);
+        TextView first_text_manager_to_tenant = findViewById(R.id.first_text_manager_to_tenant);
+        TextView first_text_maintenance_to_tenant = findViewById(R.id.first_text_maintenance_to_tenant);
+        TextView first_text_tenant_to_maintenance = findViewById(R.id.first_text_tenant_to_maintenance);
+
+        ImageView first_chat_bubble_maintenance_to_manager = findViewById(R.id.first_chat_bubble_maintenance_to_manager);
+        ImageView first_chat_bubble_manager_to_maintenance = findViewById(R.id.first_chat_bubble_manager_to_maintenance);
+        ImageView first_chat_bubble_tenant_to_manager = findViewById(R.id.first_chat_bubble_tenant_to_manager);
+        ImageView first_chat_bubble_manager_to_tenant = findViewById(R.id.first_chat_bubble_manager_to_tenant);
+        ImageView first_chat_bubble_maintenance_to_tenant = findViewById(R.id.first_chat_bubble_maintenance_to_tenant);
+        ImageView first_chat_bubble_tenant_to_maintenance = findViewById(R.id.first_chat_bubble_tenant_to_maintenance);
 
         switch (target){
             case "manager":
                 chatimage.setImageResource(R.mipmap.manager_profile_pic);
+                switch (host) {
+                    case "maintenance":
+                        first_text_maintenance_to_manager.setVisibility(View.VISIBLE);
+                        first_chat_bubble_maintenance_to_manager.setVisibility(View.VISIBLE);
+                        break;
+                    case "tenant":
+                        first_text_tenant_to_manager.setVisibility(View.VISIBLE);
+                        first_chat_bubble_tenant_to_manager.setVisibility(View.VISIBLE);
+                        break;
+                }
                 break;
             case "maintenance":
                 chatimage.setImageResource(R.mipmap.maintenance_profile_pic);
+                switch (host) {
+                    case "manager":
+                        first_text_manager_to_maintenance.setVisibility(View.VISIBLE);
+                        first_chat_bubble_manager_to_maintenance.setVisibility(View.VISIBLE);
+                        break;
+                    case "tenant":
+                        first_text_tenant_to_maintenance.setVisibility(View.VISIBLE);
+                        first_chat_bubble_tenant_to_maintenance.setVisibility(View.VISIBLE);
+                        break;
+                }
                 break;
             case "tenant":
                 chatimage.setImageResource(R.mipmap.tenant_profile_pic);
+                switch (host) {
+                    case "manager":
+                        first_text_manager_to_tenant.setVisibility(View.VISIBLE);
+                        first_chat_bubble_manager_to_tenant.setVisibility(View.VISIBLE);
+                        break;
+                    case "maintenance":
+                        first_text_maintenance_to_tenant.setVisibility(View.VISIBLE);
+                        first_chat_bubble_maintenance_to_tenant.setVisibility(View.VISIBLE);
+                        break;
+                }
                 break;
         }
 

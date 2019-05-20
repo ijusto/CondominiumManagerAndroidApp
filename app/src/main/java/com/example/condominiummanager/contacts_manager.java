@@ -37,6 +37,7 @@ public class contacts_manager extends AppCompatActivity {
             public void onClick(View v) {
                 prefs.edit().putString("chatname", "Pedro Marques").apply();
                 prefs.edit().putString("chatto", "maintenance" ).apply();
+                prefs.edit().putString("chathostid", "manager" ).apply();
                 Intent i = new Intent(getApplicationContext(), PrivateChat.class);
                 startActivity(i);
             }
@@ -46,6 +47,7 @@ public class contacts_manager extends AppCompatActivity {
             public void onClick(View v) {
                 prefs.edit().putString("chatname", "Joana Castelo-Branco").apply();
                 prefs.edit().putString("chatto", "tenant" ).apply();
+                prefs.edit().putString("chathostid", "manager" ).apply();
                 Intent i = new Intent(getApplicationContext(), PrivateChat.class);
                 startActivity(i);
             }
