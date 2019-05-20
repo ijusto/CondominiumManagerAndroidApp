@@ -38,10 +38,13 @@ public class PrivateChat extends AppCompatActivity {
         switch (target){
             case "manager":
                 chatimage.setImageResource(R.mipmap.manager_profile_pic);
+                break;
             case "maintenance":
                 chatimage.setImageResource(R.mipmap.maintenance_profile_pic);
+                break;
             case "tenant":
                 chatimage.setImageResource(R.mipmap.tenant_profile_pic);
+                break;
         }
 
         chat_name.setText(prefs.getString("chatname", "something wrong"));

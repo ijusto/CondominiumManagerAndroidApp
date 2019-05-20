@@ -132,4 +132,31 @@
         app:layout_constraintTop_toBottomOf="@+id/manager_chat_tenant_pic"
         app:layout_constraintVertical_bias="0.04"
         app:srcCompat="@mipmap/maintenance_profile_pic" />
+
+    <ImageView
+        android:id="@+id/maintenance_private_chat"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/manager_chat_maintenance_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/manager_chat_maintenance_pic"
+        app:layout_constraintTop_toTopOf="@+id/manager_chat_maintenance_pic"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/tenant_private_chat"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/manager_chat_tenant_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/manager_chat_tenant_pic"
+        app:layout_constraintTop_toTopOf="@+id/manager_chat_tenant_pic"
+        app:srcCompat="@android:color/transparent" />
 </android.support.constraint.ConstraintLayout>

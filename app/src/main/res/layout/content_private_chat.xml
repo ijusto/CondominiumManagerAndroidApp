@@ -10,21 +10,19 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="394dp"
-        android:layout_height="669dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="#3C92CA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/go_back_private_chat" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="397dp"
+        android:layout_width="0dp"
         android:layout_height="85dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/chat_name"
@@ -39,50 +37,38 @@
         android:id="@+id/chat_pic"
         android:layout_width="78dp"
         android:layout_height="69dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/go_back_private_chat"
         app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/maintenance_profile_pic"
         tools:srcCompat="@android:color/white" />
 
     <TextView
         android:id="@+id/chat_name"
-        android:layout_width="268dp"
-        android:layout_height="52dp"
+        android:layout_width="238dp"
+        android:layout_height="56dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:gravity="center|center_vertical"
+        android:gravity="center_vertical"
         android:text="Nome"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/chat_pic"
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
     <ImageView
-        android:id="@+id/go_back_private_chat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.02"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/back_icon" />
-
-    <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="83dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
@@ -121,5 +107,212 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
         app:layout_constraintStart_toEndOf="@+id/answerchat"
         app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/go_back_private_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/back_icon" />
+
+    <ImageView
+        android:id="@+id/first_chat_bubble_manager_to_tenant"
+        android:layout_width="341dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@android:color/white" />
+
+    <TextView
+        android:id="@+id/first_text_manager_to_tenant"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Bom dia Sr Joaquim! Queria só informá-lo que já efetuei o pagamento das quotas do mês de Maio. Continuação, Joana."
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/first_chat_bubble_manager_to_tenant"
+        app:layout_constraintEnd_toEndOf="@+id/first_chat_bubble_manager_to_tenant"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/first_chat_bubble_manager_to_tenant"
+        app:layout_constraintTop_toTopOf="@+id/first_chat_bubble_manager_to_tenant"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/first_chat_bubble_maintenance_to_tenant"
+        android:layout_width="341dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@android:color/white" />
+
+    <TextView
+        android:id="@+id/first_text_maintenance_to_tenant"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Boa tarde, Sr Pedro. Será que me podia verificar as leituras do 1ºDir?"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/first_chat_bubble_maintenance_to_tenant"
+        app:layout_constraintEnd_toEndOf="@+id/first_chat_bubble_maintenance_to_tenant"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/first_chat_bubble_maintenance_to_tenant"
+        app:layout_constraintTop_toTopOf="@+id/first_chat_bubble_maintenance_to_tenant"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/first_chat_bubble_tenant_to_maintenance"
+        android:layout_width="341dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@android:color/white" />
+
+    <TextView
+        android:id="@+id/first_text_tenant_to_maintenance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Boa tarde, Sr Pedro. Será que me podia verificar as leituras do 1ºDir?"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/first_chat_bubble_tenant_to_maintenance"
+        app:layout_constraintEnd_toEndOf="@+id/first_chat_bubble_tenant_to_maintenance"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/first_chat_bubble_tenant_to_maintenance"
+        app:layout_constraintTop_toTopOf="@+id/first_chat_bubble_tenant_to_maintenance"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/first_chat_bubble_tenant_to_manager"
+        android:layout_width="341dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@android:color/white" />
+
+    <TextView
+        android:id="@+id/first_text_tenant_to_manager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Bom dia Sr Joaquim! Queria só informá-lo que já efetuei o pagamento das quotas do mês de Maio. Continuação, Joana."
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/first_chat_bubble_tenant_to_manager"
+        app:layout_constraintEnd_toEndOf="@+id/first_chat_bubble_tenant_to_manager"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/first_chat_bubble_tenant_to_manager"
+        app:layout_constraintTop_toTopOf="@+id/first_chat_bubble_tenant_to_manager"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/first_chat_bubble_manager_to_maintenance"
+        android:layout_width="336dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@android:color/white" />
+
+    <TextView
+        android:id="@+id/first_text_manager_to_maintenance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Rendimento pago. Bom Domingo."
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/first_chat_bubble_manager_to_maintenance"
+        app:layout_constraintEnd_toEndOf="@+id/first_chat_bubble_manager_to_maintenance"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/first_chat_bubble_manager_to_maintenance"
+        app:layout_constraintTop_toTopOf="@+id/first_chat_bubble_manager_to_maintenance"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/first_chat_bubble_maintenance_to_manager"
+        android:layout_width="336dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@android:color/white" />
+
+    <TextView
+        android:id="@+id/first_text_maintenance_to_manager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Rendimento pago. Bom Domingo."
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/first_chat_bubble_maintenance_to_manager"
+        app:layout_constraintEnd_toEndOf="@+id/first_chat_bubble_maintenance_to_manager"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/first_chat_bubble_maintenance_to_manager"
+        app:layout_constraintTop_toTopOf="@+id/first_chat_bubble_maintenance_to_manager"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
