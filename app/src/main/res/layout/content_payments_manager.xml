@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/delete_manager_payment"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="44dp"
@@ -31,7 +31,7 @@
         app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/payment_manager"
         android:layout_width="32dp"
         android:layout_height="34dp"
         android:layout_marginStart="64dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title3" />
 
     <TextView
-        android:id="@+id/textView42"
+        android:id="@+id/manager_payment_value"
         android:layout_width="125dp"
         android:layout_height="35dp"
         android:gravity="center"
@@ -63,7 +63,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Quotas Maio"
+        android:text="Quotas Maio Joana"
         android:textAlignment="center"
         android:textColor="@color/ic_launcher_background"
         android:textSize="24sp"
