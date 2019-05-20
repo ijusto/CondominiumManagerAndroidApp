@@ -63,8 +63,7 @@ public class ProfileTenant extends AppCompatActivity {
 
                     edit.setText("Save");
 
-                }else{
-                    EditText editmail = findViewById(R.id.editemail);
+                }else{                    EditText editmail = findViewById(R.id.editemail);
                     TextView emailtext = findViewById(R.id.emailtext);
                     EditText editmobile = findViewById(R.id.editmobile);
                     TextView mobiletext = findViewById(R.id.mobiletext);

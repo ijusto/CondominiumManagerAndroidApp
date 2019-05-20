@@ -169,37 +169,37 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
-        <EditText
-            android:id="@+id/editemail_manager"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/mobiletext1"
-            app:layout_constraintEnd_toEndOf="@+id/emailtext_manager"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/emailtext_manager"
-            app:layout_constraintTop_toBottomOf="@+id/textView20"
-            app:layout_constraintVertical_bias="0.0" />
+    <EditText
+        android:id="@+id/editemail_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textLongMessage|textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/mobiletext1"
+        app:layout_constraintEnd_toEndOf="@+id/emailtext_manager"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emailtext_manager"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <EditText
-            android:id="@+id/editmobile_manager"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/textView25"
-            app:layout_constraintEnd_toEndOf="@+id/mobiletext_manager"
-            app:layout_constraintHorizontal_bias="0.057"
-            app:layout_constraintStart_toStartOf="@+id/mobiletext_manager"
-            app:layout_constraintTop_toBottomOf="@+id/mobiletext1"
-            app:layout_constraintVertical_bias="0.0" />
+    <EditText
+        android:id="@+id/editmobile_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textLongMessage|textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView25"
+        app:layout_constraintEnd_toEndOf="@+id/mobiletext_manager"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="@+id/mobiletext_manager"
+        app:layout_constraintTop_toBottomOf="@+id/mobiletext1"
+        app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView21"

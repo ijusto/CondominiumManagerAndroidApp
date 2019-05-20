@@ -47,6 +47,76 @@ public class Settings extends AppCompatActivity {
         final ImageView public_mobile = findViewById((R.id.public_mobile));
         final ImageView privacy_mobile = findViewById((R.id.private_mobile));
 
+
+        String username = prefs.getString("usernametext","tenant");
+
+        switch (username){
+            case "tenant":
+                if(prefs.getString("tenantmobileprivacy","false").equals("false")){
+                    public_mobile.setImageResource(R.mipmap.public_disable_icon);
+                    privacy_mobile.setImageResource(R.mipmap.private_enable_icon);
+                    mobile_privacy.setChecked(false);
+                }else if(prefs.getString("tenantmobileprivacy","false").equals("true")){
+                    public_mobile.setImageResource(R.mipmap.public_enable_icon);
+                    privacy_mobile.setImageResource(R.mipmap.private_disable_icon);
+                    mobile_privacy.setChecked(true);
+                }
+                if(prefs.getString("tenantemailprivacy","false").equals("false")){
+                    public_email.setImageResource(R.mipmap.public_disable_icon);
+                    privacy_email.setImageResource(R.mipmap.private_enable_icon);
+                    email_privacy.setChecked(false);
+                }else if(prefs.getString("tenantemailprivacy","false").equals("true")){
+                    public_email.setImageResource(R.mipmap.public_enable_icon);
+                    privacy_email.setImageResource(R.mipmap.private_disable_icon);
+                    email_privacy.setChecked(true);
+                }
+                break;
+
+            case "manager":
+                if(prefs.getString("managermobileprivacy","false").equals("false")){
+                    public_mobile.setImageResource(R.mipmap.public_disable_icon);
+                    privacy_mobile.setImageResource(R.mipmap.private_enable_icon);
+                    mobile_privacy.setChecked(false);
+                }else if(prefs.getString("managermobileprivacy","false").equals("true")){
+                    public_mobile.setImageResource(R.mipmap.public_enable_icon);
+                    privacy_mobile.setImageResource(R.mipmap.private_disable_icon);
+                    mobile_privacy.setChecked(true);
+                }
+                if(prefs.getString("manageremailprivacy","false").equals("false")){
+                    public_email.setImageResource(R.mipmap.public_disable_icon);
+                    privacy_email.setImageResource(R.mipmap.private_enable_icon);
+                    email_privacy.setChecked(false);
+                }else if(prefs.getString("manageremailprivacy","false").equals("true")){
+                    public_email.setImageResource(R.mipmap.public_enable_icon);
+                    privacy_email.setImageResource(R.mipmap.private_disable_icon);
+                    email_privacy.setChecked(true);
+                }
+                break;
+
+            case "maintenance":
+
+                if(prefs.getString("maintenancemobileprivacy","false").equals("false")){
+                    public_mobile.setImageResource(R.mipmap.public_disable_icon);
+                    privacy_mobile.setImageResource(R.mipmap.private_enable_icon);
+                    mobile_privacy.setChecked(false);
+                }else if(prefs.getString("maintenancemobileprivacy","false").equals("true")){
+                    public_mobile.setImageResource(R.mipmap.public_enable_icon);
+                    privacy_mobile.setImageResource(R.mipmap.private_disable_icon);
+                    mobile_privacy.setChecked(true);
+                }
+                if(prefs.getString("maintenanceemailprivacy","false").equals("false")){
+                    public_email.setImageResource(R.mipmap.public_disable_icon);
+                    privacy_email.setImageResource(R.mipmap.private_enable_icon);
+                    email_privacy.setChecked(false);
+                }else if(prefs.getString("maintenanceemailprivacy","false").equals("true")){
+                    public_email.setImageResource(R.mipmap.public_enable_icon);
+                    privacy_email.setImageResource(R.mipmap.private_disable_icon);
+                    email_privacy.setChecked(true);
+                }
+                break;
+        }
+
+
         email_privacy.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -54,13 +124,13 @@ public class Settings extends AppCompatActivity {
                     String username = prefs.getString("usernametext", "tenant");
                     switch (username) {
                         case "tenant":
-                            prefs.edit().putString("tenantemail", "true").apply();
+                            prefs.edit().putString("tenantemailprivacy", "true").apply();
                             break;
                         case "manager":
-                            prefs.edit().putString("manageremail", "true").apply();
+                            prefs.edit().putString("manageremailprivacy", "true").apply();
                             break;
                         case "maintenance":
-                            prefs.edit().putString("maintenanceemail", "true").apply();
+                            prefs.edit().putString("maintenanceemailprivacy", "true").apply();
                             break;
                     }
                     public_email.setImageResource(R.mipmap.public_enable_icon);
@@ -69,13 +139,13 @@ public class Settings extends AppCompatActivity {
                     String username = prefs.getString("usernametext", "tenant");
                     switch (username) {
                         case "tenant":
-                            prefs.edit().putString("tenantemail", "false").apply();
+                            prefs.edit().putString("tenantemailprivacy", "false").apply();
                             break;
                         case "manager":
-                            prefs.edit().putString("manageremail", "false").apply();
+                            prefs.edit().putString("manageremailprivacy", "false").apply();
                             break;
                         case "maintenance":
-                            prefs.edit().putString("maintenanceemail", "false").apply();
+                            prefs.edit().putString("maintenanceemailprivacy", "false").apply();
                             break;
                     }
                     public_email.setImageResource(R.mipmap.public_disable_icon);
