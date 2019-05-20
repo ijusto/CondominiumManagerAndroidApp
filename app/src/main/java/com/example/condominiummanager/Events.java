@@ -57,50 +57,19 @@ public class Events extends AppCompatActivity {
         final IntWrapper day = new IntWrapper(0);
         final IntWrapper monthwrap = new IntWrapper(0);
         final IntWrapper yearwrap  = new IntWrapper(0);
+        final IntWrapper chosenday = new IntWrapper(0);
+        final IntWrapper chosenmonth = new IntWrapper(0);
+        final IntWrapper chosenyear = new IntWrapper(0);
+
+
 
         calendars.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
                 final int[] date = {dayOfMonth, month, year};
                 day.value = dayOfMonth;
-                monthwrap.value = month + 1;
+                monthwrap.value = month;
                 yearwrap.value = year;
-            }
-        });
-
-
-        addevent.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                day_info.setText("Date:  " + day.value + "/" + monthwrap.value + "/" + yearwrap.value);
-                add_event_rect_info.setVisibility(View.VISIBLE);
-                day_info.setVisibility(View.VISIBLE);
-                event_name.setVisibility(View.VISIBLE);
-                event_hour.setVisibility(View.VISIBLE);
-                event_description.setVisibility(View.VISIBLE);
-                event_desc_input.setVisibility(View.VISIBLE);
-                event_name_input.setVisibility(View.VISIBLE);
-                event_hour_input.setVisibility(View.VISIBLE);
-                addevent.setVisibility((View.INVISIBLE));
-                checkevent.setVisibility((View.VISIBLE));
-
-            }
-        });
-
-        checkevent.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                add_event_rect_info.setVisibility(View.INVISIBLE);
-                day_info.setVisibility(View.INVISIBLE);
-                event_name.setVisibility(View.INVISIBLE);
-                event_hour.setVisibility(View.INVISIBLE);
-                event_description.setVisibility(View.INVISIBLE);
-                event_desc_input.setVisibility(View.INVISIBLE);
-                event_name_input.setVisibility(View.INVISIBLE);
-                event_hour_input.setVisibility(View.INVISIBLE);
-                checkevent.setVisibility((View.INVISIBLE));
-                addevent.setVisibility((View.VISIBLE));
-                prefs.edit().putString("done","true").apply();
 
                 if(prefs.getString("done", "false").equals("true")){
                     final TextView whois = findViewById(R.id.whosgoing);
@@ -113,14 +82,18 @@ public class Events extends AppCompatActivity {
                         @Override
                         public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
                             TextView details = findViewById(R.id.detailstwenty);
-                            CheckBox going = findViewById(R.id.goingevent);
+                            TextView whosgo = findViewById(R.id.whosgoing_lol);
+                            final CheckBox going = findViewById(R.id.goingevent);
                             TextView top = findViewById(R.id.whosgoing_lol);
-
-                            if (year == 2019 && month == 4 && dayOfMonth == 22){
+                            details.setText(event_name_input.getText().toString() + "\n" + event_desc_input.getText().toString() + "\n" + day_info.getText().toString());
+                            TextView justgoing = findViewById(R.id.goingtextsimple);
+                            if (year == chosenyear.value && month == chosenmonth.value && dayOfMonth == chosenday.value){
                                 details.setVisibility(View.VISIBLE);
                                 going.setVisibility(View.VISIBLE);
                                 whois.setVisibility(View.VISIBLE);
                                 top.setVisibility(View.VISIBLE);
+                                whosgo.setVisibility(View.VISIBLE);
+                                justgoing.setVisibility(View.VISIBLE);
 
                                 String username = prefs.getString("usernametext", "tenant");
                                 switch (username){
@@ -144,72 +117,117 @@ public class Events extends AppCompatActivity {
                                 going.setVisibility(View.INVISIBLE);
                                 whois.setVisibility(View.INVISIBLE);
                                 top.setVisibility(View.INVISIBLE);
+                                justgoing.setVisibility(View.INVISIBLE);
                             }
 
-                        }
-                    });
 
-                    final CheckBox going = findViewById(R.id.goingevent);
-                    going.setOnClickListener(new View.OnClickListener(){
-                        @Override
-                        public void onClick(View v){
-                            TextView whois = findViewById(R.id.whosgoing);
-                            if (going.isChecked()){
-                                String whoistr = "";
-                                String username = prefs.getString("usernametext", "tenant");
-                                switch (username) {
-                                    case "tenant":
-                                        prefs.edit().putString("checkedtenant", "true").apply();
-                                        whoistr = prefs.getString("whoistr", "");
-                                        prefs.edit().putString("whoistr", whoistr + "  Joana Castelo-Branco  ").apply();
-                                        whois.setText(prefs.getString("whoistr", ""));
-                                        break;
-                                    case "manager":
-                                        prefs.edit().putString("checkedmanager", "true").apply();
-                                        whoistr = prefs.getString("whoistr", "");
-                                        prefs.edit().putString("whoistr", whoistr + "  Joaquim Inácio  ").apply();
-                                        whois.setText(prefs.getString("whoistr", ""));
-                                        break;
-                                    case "maintenance":
-                                        prefs.edit().putString("checkedmaintenance", "true").apply();
-                                        whoistr = prefs.getString("whoistr", "");
-                                        prefs.edit().putString("whoistr", whoistr + "  Pedro Marques  ").apply();
-                                        whois.setText(prefs.getString("whoistr", ""));
-                                        break;
-                                }
-                            }else{
-                                String whoistr = "";
-                                String username = prefs.getString("usernametext", "tenant");
 
-                                switch (username) {
-                                    case "tenant":
-                                        prefs.edit().putString("checkedtenant", "false").apply();
-                                        whoistr = prefs.getString("whoistr", "");
-                                        whoistr = whoistr.replace("  Joana Castelo-Branco  ", "");
-                                        prefs.edit().putString("whoistr", whoistr).apply();
-                                        whois.setText(prefs.getString("whoistr", ""));
-                                        break;
-                                    case "manager":
-                                        prefs.edit().putString("checkedmanager", "false").apply();
-                                        whoistr = prefs.getString("whoistr", "");
-                                        whoistr = whoistr.replace("  Joaquim Inácio  ", "");
-                                        prefs.edit().putString("whoistr", whoistr).apply();
-                                        whois.setText(prefs.getString("whoistr", ""));
-                                        break;
-                                    case "maintenance":
-                                        prefs.edit().putString("checkedmaintenance", "false").apply();
-                                        whoistr = prefs.getString("whoistr", "");
-                                        whoistr = whoistr.replace("  Pedro Marques  ", "");
-                                        prefs.edit().putString("whoistr", whoistr).apply();
-                                        whois.setText(prefs.getString("whoistr", ""));
-                                        break;
+                            going.setOnClickListener(new View.OnClickListener(){
+                                @Override
+                                public void onClick(View v){
+                                    TextView whois = findViewById(R.id.whosgoing);
+                                    if (going.isChecked()){
+                                        String whoistr = "";
+                                        String username = prefs.getString("usernametext", "tenant");
+                                        switch (username) {
+                                            case "tenant":
+                                                prefs.edit().putString("checkedtenant", "true").apply();
+                                                whoistr = prefs.getString("whoistr", "");
+                                                prefs.edit().putString("whoistr", whoistr + "  Joana Castelo-Branco  ").apply();
+                                                whois.setText(prefs.getString("whoistr", ""));
+                                                break;
+                                            case "manager":
+                                                prefs.edit().putString("checkedmanager", "true").apply();
+                                                whoistr = prefs.getString("whoistr", "");
+                                                prefs.edit().putString("whoistr", whoistr + "  Joaquim Inácio  ").apply();
+                                                whois.setText(prefs.getString("whoistr", ""));
+                                                break;
+                                            case "maintenance":
+                                                prefs.edit().putString("checkedmaintenance", "true").apply();
+                                                whoistr = prefs.getString("whoistr", "");
+                                                prefs.edit().putString("whoistr", whoistr + "  Pedro Marques  ").apply();
+                                                whois.setText(prefs.getString("whoistr", ""));
+                                                break;
+                                        }
+                                    }else{
+                                        String whoistr = "";
+                                        String username = prefs.getString("usernametext", "tenant");
+
+                                        switch (username) {
+                                            case "tenant":
+                                                prefs.edit().putString("checkedtenant", "false").apply();
+                                                whoistr = prefs.getString("whoistr", "");
+                                                whoistr = whoistr.replace("  Joana Castelo-Branco  ", "");
+                                                prefs.edit().putString("whoistr", whoistr).apply();
+                                                whois.setText(prefs.getString("whoistr", ""));
+                                                break;
+                                            case "manager":
+                                                prefs.edit().putString("checkedmanager", "false").apply();
+                                                whoistr = prefs.getString("whoistr", "");
+                                                whoistr = whoistr.replace("  Joaquim Inácio  ", "");
+                                                prefs.edit().putString("whoistr", whoistr).apply();
+                                                whois.setText(prefs.getString("whoistr", ""));
+                                                break;
+                                            case "maintenance":
+                                                prefs.edit().putString("checkedmaintenance", "false").apply();
+                                                whoistr = prefs.getString("whoistr", "");
+                                                whoistr = whoistr.replace("  Pedro Marques  ", "");
+                                                prefs.edit().putString("whoistr", whoistr).apply();
+                                                whois.setText(prefs.getString("whoistr", ""));
+                                                break;
+                                        }
+                                    }
                                 }
-                            }
+                            });
                         }
                     });
                 }
+
             }
         });
+
+
+        addevent.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                day_info.setText("Date:  " + day.value + "/" + (monthwrap.value+1) + "/" + yearwrap.value);
+
+                add_event_rect_info.setVisibility(View.VISIBLE);
+                day_info.setVisibility(View.VISIBLE);
+                event_name.setVisibility(View.VISIBLE);
+                event_hour.setVisibility(View.VISIBLE);
+                event_description.setVisibility(View.VISIBLE);
+                event_desc_input.setVisibility(View.VISIBLE);
+                event_name_input.setVisibility(View.VISIBLE);
+                event_hour_input.setVisibility(View.VISIBLE);
+                addevent.setVisibility((View.INVISIBLE));
+                checkevent.setVisibility((View.VISIBLE));
+
+            }
+        });
+
+        checkevent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                add_event_rect_info.setVisibility(View.INVISIBLE);
+                day_info.setVisibility(View.INVISIBLE);
+                event_name.setVisibility(View.INVISIBLE);
+                event_hour.setVisibility(View.INVISIBLE);
+                event_description.setVisibility(View.INVISIBLE);
+                event_desc_input.setVisibility(View.INVISIBLE);
+                event_name_input.setVisibility(View.INVISIBLE);
+                event_hour_input.setVisibility(View.INVISIBLE);
+                checkevent.setVisibility((View.INVISIBLE));
+                addevent.setVisibility((View.VISIBLE));
+                chosenday.value = day.value;
+                prefs.edit().putString("day", String.valueOf(chosenday.value)).apply();
+                chosenmonth.value = monthwrap.value;
+                chosenyear.value = yearwrap.value;
+                prefs.edit().putString("done", "true").apply();
+
+            }
+        });
+
 
 
 
