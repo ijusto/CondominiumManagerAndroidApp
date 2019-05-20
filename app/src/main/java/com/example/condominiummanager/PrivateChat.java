@@ -3,6 +3,7 @@ package com.example.condominiummanager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -30,26 +31,28 @@ public class PrivateChat extends AppCompatActivity {
             }
         });
 
-        TextView chat_name = findViewById(R.id.chat_name);
-        ImageView chatimage = findViewById(R.id.chat_pic);
+        final TextView chat_name = findViewById(R.id.chat_name);
+        final ImageView chatimage = findViewById(R.id.chat_pic);
 
         String target = prefs.getString("chatto", "");
         String host = prefs.getString("chathostid", "");
 
 
-        TextView first_text_maintenance_to_manager = findViewById(R.id.first_text_maintenance_to_manager);
-        TextView first_text_manager_to_maintenance = findViewById(R.id.first_text_manager_to_maintenance);
-        TextView first_text_tenant_to_manager = findViewById(R.id.first_text_tenant_to_manager);
-        TextView first_text_manager_to_tenant = findViewById(R.id.first_text_manager_to_tenant);
-        TextView first_text_maintenance_to_tenant = findViewById(R.id.first_text_maintenance_to_tenant);
-        TextView first_text_tenant_to_maintenance = findViewById(R.id.first_text_tenant_to_maintenance);
+        final TextView first_text_maintenance_to_manager = findViewById(R.id.first_text_maintenance_to_manager);
+        final TextView first_text_manager_to_maintenance = findViewById(R.id.first_text_manager_to_maintenance);
+        final TextView first_text_tenant_to_manager = findViewById(R.id.first_text_tenant_to_manager);
+        final TextView first_text_manager_to_tenant = findViewById(R.id.first_text_manager_to_tenant);
+        final TextView first_text_maintenance_to_tenant = findViewById(R.id.first_text_maintenance_to_tenant);
+        final TextView first_text_tenant_to_maintenance = findViewById(R.id.first_text_tenant_to_maintenance);
+        final TextView respond_text = findViewById(R.id.respond_text);
 
-        ImageView first_chat_bubble_maintenance_to_manager = findViewById(R.id.first_chat_bubble_maintenance_to_manager);
-        ImageView first_chat_bubble_manager_to_maintenance = findViewById(R.id.first_chat_bubble_manager_to_maintenance);
-        ImageView first_chat_bubble_tenant_to_manager = findViewById(R.id.first_chat_bubble_tenant_to_manager);
-        ImageView first_chat_bubble_manager_to_tenant = findViewById(R.id.first_chat_bubble_manager_to_tenant);
-        ImageView first_chat_bubble_maintenance_to_tenant = findViewById(R.id.first_chat_bubble_maintenance_to_tenant);
-        ImageView first_chat_bubble_tenant_to_maintenance = findViewById(R.id.first_chat_bubble_tenant_to_maintenance);
+        final ImageView first_chat_bubble_maintenance_to_manager = findViewById(R.id.first_chat_bubble_maintenance_to_manager);
+        final ImageView first_chat_bubble_manager_to_maintenance = findViewById(R.id.first_chat_bubble_manager_to_maintenance);
+        final ImageView first_chat_bubble_tenant_to_manager = findViewById(R.id.first_chat_bubble_tenant_to_manager);
+        final ImageView first_chat_bubble_manager_to_tenant = findViewById(R.id.first_chat_bubble_manager_to_tenant);
+        final ImageView first_chat_bubble_maintenance_to_tenant = findViewById(R.id.first_chat_bubble_maintenance_to_tenant);
+        final ImageView first_chat_bubble_tenant_to_maintenance = findViewById(R.id.first_chat_bubble_tenant_to_maintenance);
+        final ImageView respond_text_chat_bubble = findViewById(R.id.respond_text_chat_bubble);
 
         switch (target){
             case "manager":
@@ -96,17 +99,19 @@ public class PrivateChat extends AppCompatActivity {
         chat_name.setText(prefs.getString("chatname", "something wrong"));
 
         final Button reply = findViewById(R.id.replybutton);
+        final ImageView imageView7 = findViewById(R.id.imageView7);
 
         reply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final EditText replytext = findViewById(R.id.answerchat);
                 String answer = replytext.getText().toString();
-                //TODO REPLY CHAT
+                respond_text.setText(answer);
+                respond_text.setVisibility(View.VISIBLE);
+                respond_text_chat_bubble.setVisibility(View.VISIBLE);
+                replytext.setText("");
             }
         });
-
-
     }
 
 }

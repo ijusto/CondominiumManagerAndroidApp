@@ -8,6 +8,18 @@
     tools:context=".PaymentsTenant"
     tools:showIn="@layout/activity_payments_tenant">
 
+    <ImageView
+        android:id="@+id/first_payment_tenant"
+        android:layout_width="296dp"
+        android:layout_height="171dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:background="#3D93CC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
     <TextView
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
@@ -33,4 +45,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/back_icon" />
+
+    <TextView
+        android:id="@+id/first_payment_tenant_title"
+        android:layout_width="221dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Quotas Maio"
+        android:textAlignment="center"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
+        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toTopOf="@+id/first_payment_tenant" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="32dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:textColor="@color/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="60€"
+        android:textAlignment="center"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
+        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toBottomOf="@+id/first_payment_tenant_title" />
 </android.support.constraint.ConstraintLayout>
