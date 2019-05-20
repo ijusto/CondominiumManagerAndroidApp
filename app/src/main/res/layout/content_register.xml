@@ -12,6 +12,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <EditText
+            android:id="@+id/zipcode1"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Zip"
+            android:inputType="textPersonName"
+            android:maxLength="4"
+            app:layout_constraintBottom_toBottomOf="@+id/addressreg"
+            app:layout_constraintEnd_toStartOf="@+id/zipcode2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/addressreg"
+            app:layout_constraintTop_toTopOf="@+id/addressreg" />
+
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="226dp"
@@ -65,7 +82,8 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobileno" />
+        app:layout_constraintTop_toBottomOf="@+id/mobileno"
+        android:maxLength="9"/>
 
     <EditText
         android:id="@+id/mobileno"
@@ -79,61 +97,64 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fullname" />
+        app:layout_constraintTop_toBottomOf="@+id/fullname"
+        />
 
-    <EditText
-        android:id="@+id/addressreg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Address"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        <EditText
+            android:id="@+id/addressreg"
+            android:layout_width="127dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="99dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
 
-    <EditText
-        android:id="@+id/floorreg"
-        android:layout_width="138dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Floor"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zipcode" />
-
-    <EditText
-        android:id="@+id/zipcode"
-        android:layout_width="138dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Zip Code"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addressreg" />
-
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="395dp"
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/floorreg"
+            android:layout_width="138dp"
+            android:layout_height="46dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:visibility="invisible"
+            android:ems="10"
+            android:hint="Floor"
+            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.354"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressreg" />
+
+        <EditText
+            android:id="@+id/zipcode2"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Code"
+            android:inputType="textPersonName"
+            android:maxLength="3"
+            app:layout_constraintBottom_toBottomOf="@+id/zipcode1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/zipcode1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="241dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.59"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/floorreg" />
 
@@ -165,6 +186,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/back_icon" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="-"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/zipcode2"
+            app:layout_constraintEnd_toStartOf="@+id/zipcode2"
+            app:layout_constraintStart_toEndOf="@+id/zipcode1"
+            app:layout_constraintTop_toTopOf="@+id/zipcode2" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

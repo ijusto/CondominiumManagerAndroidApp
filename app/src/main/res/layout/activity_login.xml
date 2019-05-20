@@ -11,6 +11,32 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".ui.login.LoginActivity">
 
+    <TextView
+        android:id="@+id/password_warning_login"
+        android:layout_width="296dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Enter a password"
+        android:textColor="#E94A4A"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <ImageView
+        android:id="@+id/email_warning_login_icon"
+        android:layout_width="23dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/email_warning_login"
+        app:layout_constraintEnd_toStartOf="@+id/email_warning_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toTopOf="@+id/email_warning_login"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/warning_pic" />
+
     <EditText
         android:id="@+id/username"
         android:layout_width="0dp"
@@ -100,4 +126,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.419" />
+
+    <TextView
+        android:id="@+id/email_warning_login"
+        android:layout_width="296dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="Enter an email"
+        android:textColor="#E94A4A"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <ImageView
+        android:id="@+id/password_warning_login_icon"
+        android:layout_width="23dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/password_warning_login"
+        app:layout_constraintEnd_toStartOf="@+id/password_warning_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toTopOf="@+id/password_warning_login"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/warning_pic" />
 </android.support.constraint.ConstraintLayout>

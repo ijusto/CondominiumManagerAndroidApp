@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,6 +48,11 @@ public class LoginActivity extends AppCompatActivity {
         final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", Context.MODE_PRIVATE);
         final Button registerbutton = findViewById(R.id.register);
 
+
+        final TextView email_warning_login = findViewById(R.id.email_warning_login);
+        final ImageView email_warning_login_icon = findViewById(R.id.email_warning_login_icon);
+        final TextView password_warning_login = findViewById(R.id.password_warning_login);
+        final ImageView password_warning_login_icon = findViewById(R.id.password_warning_login_icon);
 
         registerbutton.setOnClickListener(new View.OnClickListener() {
             @Override

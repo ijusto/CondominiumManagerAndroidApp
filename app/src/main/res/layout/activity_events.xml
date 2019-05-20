@@ -12,14 +12,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/addEvent"
-        android:layout_width="93dp"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:backgroundTint="#3C92CA"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="end|bottom"
-        app:srcCompat="@android:drawable/ic_menu_add" />
-
 </android.support.design.widget.CoordinatorLayout>

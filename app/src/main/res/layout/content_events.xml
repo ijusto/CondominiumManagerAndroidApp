@@ -9,6 +9,15 @@
     tools:showIn="@layout/activity_events">
 
     <ImageView
+        android:id="@+id/check_event"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/check_button" />
+
+    <ImageView
         android:id="@+id/add_event_rect_info"
         android:layout_width="351dp"
         android:layout_height="236dp"
@@ -130,7 +139,7 @@
         android:layout_marginTop="16dp"
         android:text="Day"
         android:textSize="24sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/add_event_rect_info"
         app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="@id/add_event_rect_info"
@@ -143,7 +152,7 @@
         android:layout_marginTop="8dp"
         android:text="Name: "
         android:textSize="24sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/add_event_rect_info"
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="@+id/add_event_rect_info"
@@ -156,7 +165,7 @@
         android:layout_marginTop="8dp"
         android:text="Hour: "
         android:textSize="24sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/add_event_rect_info"
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="@+id/add_event_rect_info"
@@ -169,7 +178,7 @@
         android:layout_marginTop="8dp"
         android:text="Description: "
         android:textSize="24sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/add_event_rect_info"
         app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="@+id/add_event_rect_info"
@@ -177,14 +186,14 @@
 
     <EditText
         android:id="@+id/event_desc_input"
-        android:layout_width="322dp"
-        android:layout_height="58dp"
+        android:layout_width="326dp"
+        android:layout_height="72dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/add_event_rect_info"
         app:layout_constraintEnd_toEndOf="@+id/add_event_rect_info"
         app:layout_constraintStart_toStartOf="@+id/add_event_rect_info"
@@ -193,14 +202,14 @@
     <EditText
         android:id="@+id/event_name_input"
         android:layout_width="250dp"
-        android:layout_height="37dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/event_hour"
         app:layout_constraintEnd_toEndOf="@+id/add_event_rect_info"
         app:layout_constraintStart_toEndOf="@+id/event_name"
@@ -216,12 +225,20 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="time"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/event_description"
         app:layout_constraintEnd_toEndOf="@+id/add_event_rect_info"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/event_hour"
         app:layout_constraintTop_toBottomOf="@+id/event_name"
         app:layout_constraintVertical_bias="0.615" />
+
+    <ImageView
+        android:id="@+id/add_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/add_button" />
 
 </android.support.constraint.ConstraintLayout>

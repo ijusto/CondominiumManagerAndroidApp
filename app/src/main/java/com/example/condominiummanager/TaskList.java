@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -25,6 +23,16 @@ public class TaskList extends AppCompatActivity {
         final CheckBox check1 = findViewById(R.id.checkBox2);
         final CheckBox check2 = findViewById(R.id.checkBox3);
         final CheckBox check3 = findViewById(R.id.tasktoadd);
+
+        final ImageView add_task = findViewById(R.id.add_task_list);
+
+        add_task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Report.class);
+                startActivity(i);
+            }
+        });
 
         final ImageView go_back = findViewById(R.id.go_back_task_list);
 
