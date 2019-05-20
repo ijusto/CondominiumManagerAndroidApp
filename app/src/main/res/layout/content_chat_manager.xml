@@ -9,6 +9,34 @@
     tools:showIn="@layout/activity_chat_manager">
 
     <TextView
+        android:id="@+id/manager_chat_maintenance_text_content4"
+        android:layout_width="253dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="You: Rendimento pago. Bom Domingo."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/manager_chat_maintenance_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/manager_chat_maintenance_pic"
+        app:layout_constraintTop_toBottomOf="@+id/manager_chat_maintenance_name" />
+
+    <TextView
+        android:id="@+id/manager_chat_tenant_text_content"
+        android:layout_width="253dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Bom dia Sr Joaquim! Era só para informar que já efetuei ..."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/manager_chat_tenant_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/manager_chat_tenant_pic"
+        app:layout_constraintTop_toBottomOf="@+id/manager_chat_tenant_name" />
+
+    <TextView
         android:id="@+id/manager_chat_tenant_name"
         android:layout_width="253dp"
         android:layout_height="39dp"

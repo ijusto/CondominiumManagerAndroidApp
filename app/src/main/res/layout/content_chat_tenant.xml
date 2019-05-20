@@ -9,6 +9,34 @@
     tools:showIn="@layout/activity_chat_tenant">
 
     <TextView
+        android:id="@+id/tenant_chat_manager_text_content2"
+        android:layout_width="253dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="You: Boa tarde, Pedro. Será que me podia verificar as leituras ..."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tenant_chat_maintenance_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tenant_chat_maintenance_pic"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_chat_maintenance_name" />
+
+    <TextView
+        android:id="@+id/tenant_chat_manager_text_content"
+        android:layout_width="253dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="You: Bom dia Sr Joaquim! Era só para informar que já  ..."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tenant_chat_manager_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tenant_chat_manager_pic"
+        app:layout_constraintTop_toBottomOf="@+id/tenant_chat_manager_name" />
+
+    <TextView
         android:id="@+id/tenant_chat_maintenance_name"
         android:layout_width="253dp"
         android:layout_height="39dp"

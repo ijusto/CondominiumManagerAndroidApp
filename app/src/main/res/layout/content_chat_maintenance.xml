@@ -15,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="You: Boa tarde, Pedro. Será que me podia verificar as leituras ..."
+        android:text="Boa tarde, Pedro. Será que me podia verificar as leituras do ..."
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/maintenance_chat_tenant_pic"
         app:layout_constraintEnd_toEndOf="parent"
