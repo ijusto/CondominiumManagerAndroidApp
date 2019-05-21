@@ -37,7 +37,7 @@ public class PaymentsTenant extends AppCompatActivity {
             public void onClick(View v) {
                 if(payment.isChecked()){
                     prefs.edit().putString("tenant_payment", "true").apply();
-                    TextView text1 = findViewById(R.id.second_payment_tenant_title);
+                    TextView text1 = findViewById(R.id.second_payment_manager_title);
                     TextView text2 = findViewById(R.id.tenant_payment_value);
 
                     text1.setTextColor(Color.GREEN);
@@ -46,7 +46,7 @@ public class PaymentsTenant extends AppCompatActivity {
 
                 }else{
                     prefs.edit().putString("tenant_payment", "false").apply();
-                    TextView text1 = findViewById(R.id.second_payment_tenant_title);
+                    TextView text1 = findViewById(R.id.second_payment_manager_title);
                     TextView text2 = findViewById(R.id.tenant_payment_value);
 
                     text1.setTextColor(Color.WHITE);
@@ -57,7 +57,7 @@ public class PaymentsTenant extends AppCompatActivity {
         });
 
         if(prefs.getString("tenant_payment", "").equals("true")){
-            TextView text1 = findViewById(R.id.second_payment_tenant_title);
+            TextView text1 = findViewById(R.id.second_payment_manager_title);
             TextView text2 = findViewById(R.id.tenant_payment_value);
 
             text1.setTextColor(Color.GREEN);
@@ -65,7 +65,7 @@ public class PaymentsTenant extends AppCompatActivity {
             payment.setChecked(true);
 
         }else{
-            TextView text1 = findViewById(R.id.second_payment_tenant_title);
+            TextView text1 = findViewById(R.id.second_payment_manager_title);
             TextView text2 = findViewById(R.id.tenant_payment_value);
 
             text1.setTextColor(Color.WHITE);
@@ -77,7 +77,7 @@ public class PaymentsTenant extends AppCompatActivity {
         final ImageView delete = findViewById(R.id.delete_payment_tenant);
 
         if(prefs.getString("delete_payment_tenant","false").equals("true")){
-            TextView text1 = findViewById(R.id.second_payment_tenant_title);
+            TextView text1 = findViewById(R.id.second_payment_manager_title);
             TextView text2 = findViewById(R.id.tenant_payment_value);
             ImageView block = findViewById(R.id.first_payment_tenant);
 
@@ -92,7 +92,7 @@ public class PaymentsTenant extends AppCompatActivity {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView text1 = findViewById(R.id.second_payment_tenant_title);
+                TextView text1 = findViewById(R.id.second_payment_manager_title);
                 TextView text2 = findViewById(R.id.tenant_payment_value);
                 ImageView block = findViewById(R.id.first_payment_tenant);
 
