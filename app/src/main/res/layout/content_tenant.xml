@@ -54,26 +54,26 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/condo_manager_app_icon_inside" />
 
-    <ImageView
-        android:id="@+id/events"
-        android:layout_width="96dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/maintenance"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/condoselect"
-        app:srcCompat="@mipmap/events_icon" />
+        <ImageView
+            android:id="@+id/events"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/maintenance"
+            app:layout_constraintHorizontal_bias="0.562"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/condoselect"
+            app:srcCompat="@mipmap/events_icon" />
 
         <ImageView
             android:id="@+id/maintenance"
             android:layout_width="96dp"
             android:layout_height="99dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="76dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/condoselect"
+            app:layout_constraintTop_toTopOf="@+id/condoselect"
             app:srcCompat="@mipmap/tasklist" />
 
         <ImageView
