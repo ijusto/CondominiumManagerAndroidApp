@@ -234,6 +234,32 @@ public class Events extends AppCompatActivity {
                         + "  " + event_hour_input.getText().toString()).apply();
 
                 prefs.edit().putString("done", "true").apply();
+                TextView whois = findViewById(R.id.whosgoing);
+                String whoistr = "";
+                String username = prefs.getString("usernametext", "tenant");
+                switch (username) {
+                    case "tenant":
+                        prefs.edit().putString("checkedtenant", "true").apply();
+                        whoistr = prefs.getString("whoistr", "");
+                        prefs.edit().putString("whoistr", whoistr + "  Joana Castelo-Branco  ").apply();
+                        whois.setText(prefs.getString("whoistr", ""));
+                        break;
+                    case "manager":
+                        prefs.edit().putString("checkedmanager", "true").apply();
+                        whoistr = prefs.getString("whoistr", "");
+                        prefs.edit().putString("whoistr", whoistr + "  Joaquim Inácio  ").apply();
+                        whois.setText(prefs.getString("whoistr", ""));
+                        break;
+                    case "maintenance":
+                        prefs.edit().putString("checkedmaintenance", "true").apply();
+                        whoistr = prefs.getString("whoistr", "");
+                        prefs.edit().putString("whoistr", whoistr + "  Pedro Marques  ").apply();
+                        whois.setText(prefs.getString("whoistr", ""));
+                        break;
+                }
+                CheckBox goingevent = findViewById(R.id.goingevent);
+                goingevent.setChecked(true);
+
 
             }
         });
