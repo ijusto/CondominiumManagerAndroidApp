@@ -12,75 +12,83 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/passwordtext_tenant"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/settings_profile_tenant"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:textSize="18sp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/mobiletext1"
+            android:background="@android:drawable/btn_default_material"
+            android:backgroundTint="#3C92CA"
+            android:gravity="right|center_vertical"
+            android:paddingRight="5dp"
+            android:stateListAnimator="@null"
+            android:text="Settings"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView44"
-            app:layout_constraintTop_toBottomOf="@+id/textView44"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintStart_toStartOf="@+id/edit"
+            app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+        <TextView
+            android:id="@+id/passwordtext_tenant"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/editpassword_tenant"
+            app:layout_constraintEnd_toEndOf="@+id/editpassword_tenant"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editpassword_tenant"
+            app:layout_constraintTop_toTopOf="@+id/editpassword_tenant" />
 
         <EditText
             android:id="@+id/editpassword_tenant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:ems="10"
             android:inputType="textPassword"
             android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/passwordtext_tenant"
-            app:layout_constraintEnd_toEndOf="@+id/passwordtext_tenant"
-            app:layout_constraintHorizontal_bias="0.042"
-            app:layout_constraintStart_toStartOf="@+id/passwordtext_tenant"
-            app:layout_constraintTop_toTopOf="@+id/passwordtext_tenant"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView44"
+            app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
         <TextView
             android:id="@+id/textView44"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
             android:text="Password:"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
             app:layout_constraintTop_toBottomOf="@+id/editemail" />
 
         <Button
-        android:id="@+id/logout_profile_tenant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/settings_profile_tenant"
-        app:layout_constraintTop_toBottomOf="@+id/settings_profile_tenant"
-        app:layout_constraintVertical_bias="0.0" />
+            android:id="@+id/logout_profile_tenant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="40dp"
+            android:background="@android:drawable/btn_default_material"
+            android:backgroundTint="#3C92CA"
+            android:gravity="right|center_vertical"
+            android:paddingRight="5dp"
+            android:stateListAnimator="@null"
+            android:text="Logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/settings_profile_tenant"
+            app:layout_constraintTop_toBottomOf="@+id/settings_profile_tenant"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/settings_profile_tenant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Settings"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edit"
-        app:layout_constraintTop_toBottomOf="@+id/edit" />
-
-    <TextView
+        <TextView
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -116,189 +124,201 @@
         app:layout_constraintTop_toBottomOf="@+id/textView38"
         app:srcCompat="@mipmap/tenant_profile_pic" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="185dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="center"
-        android:text="Joana Castelo-Branco"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:text="Joana Castelo-Branco"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/title_activity_tenant"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/title_activity_tenant"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="67dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="8dp"
-        android:text="Email: "
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="67dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="8dp"
+            android:text="Email: "
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
-    <TextView
-        android:id="@+id/emailtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        <TextView
+            android:id="@+id/emailtext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editemail"
+            app:layout_constraintEnd_toEndOf="@+id/editemail"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toStartOf="@+id/editemail"
+            app:layout_constraintTop_toTopOf="@+id/editemail" />
 
         <TextView
             android:id="@+id/mobiletext1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="8dp"
             android:text="Mobile:"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView44"
+            app:layout_constraintTop_toBottomOf="@+id/editpassword_tenant" />
+
+        <TextView
+            android:id="@+id/mobiletext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editmobile"
+            app:layout_constraintEnd_toEndOf="@+id/editmobile"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintStart_toStartOf="@+id/editmobile"
+            app:layout_constraintTop_toTopOf="@+id/editmobile" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Address:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mobiletext1"
+            app:layout_constraintTop_toBottomOf="@+id/editmobile" />
+
+        <TextView
+            android:id="@+id/addresstext"
+            android:layout_width="221dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Rua da Bacalhôa nº123"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#3C92CA"
+            android:text="Edit Personal Info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailtext" />
+            tools:layout_editor_absoluteY="642dp" />
 
-    <TextView
-        android:id="@+id/mobiletext"
-        android:layout_width="81dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobiletext1" />
+        <EditText
+            android:id="@+id/editemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="8dp"
-        android:text="Address:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobiletext" />
+        <EditText
+            android:id="@+id/editmobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mobiletext1"
+            app:layout_constraintTop_toBottomOf="@+id/mobiletext1" />
 
-    <TextView
-        android:id="@+id/addresstext"
-        android:layout_width="221dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Rua da Bacalhôa nº123"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="89dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Floor:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/addresstext"
+            app:layout_constraintTop_toBottomOf="@+id/addresstext" />
 
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:text="Edit Personal Info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="1º Direito"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-    <EditText
-        android:id="@+id/editemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/mobiletext1"
-        app:layout_constraintEnd_toEndOf="@+id/emailtext"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/emailtext"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="28dp"
+            android:layout_height="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/logout_profile_tenant"
+            app:layout_constraintEnd_toEndOf="@+id/logout_profile_tenant"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="@+id/logout_profile_tenant"
+            app:layout_constraintTop_toTopOf="@+id/logout_profile_tenant"
+            app:layout_constraintVertical_bias="0.58000004"
+            app:srcCompat="@mipmap/logout" />
 
-    <EditText
-        android:id="@+id/editmobile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/textView25"
-        app:layout_constraintEnd_toEndOf="@+id/mobiletext"
-        app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toStartOf="@+id/mobiletext"
-        app:layout_constraintTop_toBottomOf="@+id/mobiletext1"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="89dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="8dp"
-        android:text="Floor:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addresstext" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:text="1º Direito"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/settings_profile_tenant"
+            app:layout_constraintEnd_toEndOf="@+id/settings_profile_tenant"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="@+id/settings_profile_tenant"
+            app:layout_constraintTop_toTopOf="@+id/settings_profile_tenant"
+            app:layout_constraintVertical_bias="0.52"
+            app:srcCompat="@mipmap/settings_icon_button" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

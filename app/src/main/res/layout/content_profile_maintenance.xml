@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -14,95 +15,92 @@
 
         <TextView
             android:id="@+id/passwordtext_maintenance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="69dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/mobiletext1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.086"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView43"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintBottom_toBottomOf="@+id/editpassword_maintenance"
+            app:layout_constraintEnd_toEndOf="@+id/editpassword_maintenance"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editpassword_maintenance"
+            app:layout_constraintTop_toTopOf="@+id/editpassword_maintenance" />
 
         <EditText
             android:id="@+id/editpassword_maintenance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:ems="10"
             android:inputType="textPassword"
             android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/passwordtext_maintenance"
-            app:layout_constraintEnd_toEndOf="@+id/passwordtext_maintenance"
-            app:layout_constraintHorizontal_bias="0.014"
-            app:layout_constraintStart_toStartOf="@+id/passwordtext_maintenance"
-            app:layout_constraintTop_toTopOf="@+id/passwordtext_maintenance"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView43"
+            app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
         <TextView
             android:id="@+id/textView43"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
             android:text="Password:"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
             app:layout_constraintTop_toBottomOf="@+id/editemail_maintenance" />
 
         <TextView
-        android:id="@+id/textView36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="8dp"
-        android:text="Profile"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="8dp"
+            android:text="Profile"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/go_back_profile_maintenance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.02"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/back_icon" />
+        <ImageView
+            android:id="@+id/go_back_profile_maintenance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView6"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/back_icon" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="78dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView36"
-        app:srcCompat="@mipmap/maintenance_profile_pic"
-        tools:srcCompat="@mipmap/maintenance_profile_pic" />
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="78dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView36"
+            app:srcCompat="@mipmap/maintenance_profile_pic"
+            tools:srcCompat="@mipmap/maintenance_profile_pic" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="268dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="center"
-        android:text="Pedro Miguel da Silva Marques"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="268dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:text="Pedro Miguel da Silva Marques"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
         <TextView
             android:id="@+id/textView19"
@@ -114,163 +112,188 @@
             android:text="@string/title_activity_maintenance"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.08"
-            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView18"
             app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="67dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="8dp"
-        android:text="Email: "
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="67dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="Email: "
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
-    <TextView
-        android:id="@+id/emailtext_maintenance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        <TextView
+            android:id="@+id/emailtext_maintenance"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editemail_maintenance"
+            app:layout_constraintEnd_toEndOf="@+id/editemail_maintenance"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toStartOf="@+id/editemail_maintenance"
+            app:layout_constraintTop_toTopOf="@+id/editemail_maintenance" />
 
         <TextView
             android:id="@+id/mobiletext1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="8dp"
             android:text="Mobile:"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.077"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailtext_maintenance" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView43"
+            app:layout_constraintTop_toBottomOf="@+id/editpassword_maintenance" />
 
-    <TextView
-        android:id="@+id/mobiletext_maintenance"
-        android:layout_width="81dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobiletext1" />
+        <TextView
+            android:id="@+id/mobiletext_maintenance"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editmobile_maintenance"
+            app:layout_constraintEnd_toEndOf="@+id/editmobile_maintenance"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/editmobile_maintenance"
+            app:layout_constraintTop_toTopOf="@+id/editmobile_maintenance" />
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="8dp"
-        android:text="Address:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobiletext_maintenance" />
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Address:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mobiletext1"
+            app:layout_constraintTop_toBottomOf="@+id/editmobile_maintenance" />
 
         <TextView
             android:id="@+id/addresstext"
             android:layout_width="221dp"
             android:layout_height="39dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="Rua da Bacalhôa nº123"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.149"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView25"
             app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:text="Edit Personal Info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addresstext" />
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#3C92CA"
+            android:text="Edit Personal Info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addresstext" />
 
         <EditText
             android:id="@+id/editemail_maintenance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
             android:ems="10"
             android:inputType="textLongMessage|textPersonName"
             android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/mobiletext1"
-            app:layout_constraintEnd_toEndOf="@+id/emailtext_maintenance"
-            app:layout_constraintHorizontal_bias="0.046"
-            app:layout_constraintStart_toStartOf="@+id/emailtext_maintenance"
-            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <EditText
+            android:id="@+id/editmobile_maintenance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="textLongMessage|textPersonName"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mobiletext1"
+            app:layout_constraintTop_toBottomOf="@+id/mobiletext1" />
+
+        <Button
+            android:id="@+id/settings_profile_maintenance"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:drawable/btn_default_material"
+            android:backgroundTint="#3C92CA"
+            android:gravity="right|center_vertical"
+            android:paddingRight="5dp"
+            android:stateListAnimator="@null"
+            android:text="Settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edit"
+            app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+        <Button
+            android:id="@+id/logout_profile_maintenance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="40dp"
+            android:background="@android:drawable/btn_default_material"
+            android:backgroundTint="#3C92CA"
+            android:gravity="right|center_vertical"
+            android:paddingRight="5dp"
+            android:stateListAnimator="@null"
+            android:text="Logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/settings_profile_maintenance"
+            app:layout_constraintTop_toBottomOf="@+id/settings_profile_maintenance"
             app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/editmobile_maintenance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textLongMessage|textPersonName"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/textView25"
-        app:layout_constraintEnd_toEndOf="@+id/mobiletext_maintenance"
-        app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toStartOf="@+id/mobiletext_maintenance"
-        app:layout_constraintTop_toBottomOf="@+id/mobiletext1"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@+id/logouticon"
+            android:layout_width="28dp"
+            android:layout_height="24dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/logout_profile_maintenance"
+            app:layout_constraintEnd_toEndOf="@+id/logout_profile_maintenance"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="@+id/logout_profile_maintenance"
+            app:layout_constraintTop_toTopOf="@+id/logout_profile_maintenance"
+            app:layout_constraintVertical_bias="0.58000004"
+            app:srcCompat="@mipmap/logout"
+            tools:srcCompat="@mipmap/logout" />
 
-    <Button
-        android:id="@+id/settings_profile_maintenance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Settings"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edit"
-        app:layout_constraintTop_toBottomOf="@+id/edit" />
-
-    <Button
-        android:id="@+id/logout_profile_maintenance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/settings_profile_maintenance"
-        app:layout_constraintTop_toBottomOf="@+id/settings_profile_maintenance"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            app:layout_constraintBottom_toBottomOf="@+id/settings_profile_maintenance"
+            app:layout_constraintEnd_toEndOf="@+id/settings_profile_maintenance"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="@+id/settings_profile_maintenance"
+            app:layout_constraintTop_toTopOf="@+id/settings_profile_maintenance"
+            app:layout_constraintVertical_bias="0.55"
+            app:srcCompat="@mipmap/settings_icon_button" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

@@ -85,6 +85,7 @@
         android:layout_marginStart="160dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="#3C92CA"
         android:text="@string/title_activity_report"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
