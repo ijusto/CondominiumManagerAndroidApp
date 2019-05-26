@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,6 +37,8 @@ public class profile_maintenance extends AppCompatActivity {
         });
 
         final Button edit = findViewById(R.id.edit);
+        final ImageView showpass = findViewById(R.id.showpass_maintenance);
+        final ImageView hidepass = findViewById(R.id.hidepass_maintenance);
 
 
         TextView emailtext = findViewById(R.id.emailtext_maintenance);
@@ -56,14 +60,14 @@ public class profile_maintenance extends AppCompatActivity {
                     EditText editmobile = findViewById(R.id.editmobile_maintenance);
                     TextView mobiletext = findViewById(R.id.mobiletext_maintenance);
                     TextView password = findViewById(R.id.passwordtext_maintenance);
-                    EditText editpassword =  findViewById(R.id.editpassword_maintenance);
+                    final EditText editpassword =  findViewById(R.id.editpassword_maintenance);
 
                     String mobile = mobiletext.getText().toString();
                     String email = emailtext.getText().toString();
-                    String passwordstr = password.getText().toString();
+                    String passwordstr = prefs.getString("maintenancepassword", "");
                     editmail.setText(email);
                     editmobile.setText(mobile);
-                    editpassword.setHint(passwordstr);
+                    editpassword.setText(passwordstr);
 
 
                     emailtext.setVisibility(View.INVISIBLE);
@@ -72,6 +76,25 @@ public class profile_maintenance extends AppCompatActivity {
                     editmobile.setVisibility(View.VISIBLE);
                     editpassword.setVisibility(View.VISIBLE);
                     password.setVisibility(View.INVISIBLE);
+                    showpass.setVisibility(View.VISIBLE);
+
+                    showpass.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            editpassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            showpass.setVisibility(View.GONE);
+                            hidepass.setVisibility(View.VISIBLE);
+                        }
+                    });
+
+                    hidepass.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            editpassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            hidepass.setVisibility(View.GONE);
+                            showpass.setVisibility(View.VISIBLE);
+                        }
+                    });
 
 
                     edit.setText("Save");
@@ -81,7 +104,7 @@ public class profile_maintenance extends AppCompatActivity {
                     EditText editmobile = findViewById(R.id.editmobile_maintenance);
                     TextView mobiletext = findViewById(R.id.mobiletext_maintenance);
                     TextView password = findViewById(R.id.passwordtext_maintenance);
-                    EditText editpassword =  findViewById(R.id.editpassword_maintenance);
+                    final EditText editpassword =  findViewById(R.id.editpassword_maintenance);
 
 
                     String email = editmail.getText().toString();
@@ -99,6 +122,9 @@ public class profile_maintenance extends AppCompatActivity {
                     editmobile.setVisibility(View.INVISIBLE);
                     password.setVisibility(View.VISIBLE);
                     editpassword.setVisibility(View.INVISIBLE);
+                    hidepass.setVisibility(View.GONE);
+                    showpass.setVisibility(View.GONE);
+
 
                     Toast toast = Toast.makeText(getApplicationContext(), "Saved successfully", Toast.LENGTH_SHORT);
                     toast.show();

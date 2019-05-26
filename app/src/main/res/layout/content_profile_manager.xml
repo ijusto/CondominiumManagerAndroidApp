@@ -295,5 +295,35 @@
             app:layout_constraintTop_toTopOf="@+id/passwordtext_manager"
             app:layout_constraintVertical_bias="0.0" />
 
+        <ImageView
+            android:id="@+id/showpass_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/editpassword_manager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.414"
+            app:layout_constraintStart_toEndOf="@+id/editpassword_manager"
+            app:layout_constraintTop_toTopOf="@+id/editpassword_manager"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@mipmap/hide_pass" />
+
+        <ImageView
+            android:id="@+id/hidepass_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/editpassword_manager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.414"
+            app:layout_constraintStart_toEndOf="@+id/editpassword_manager"
+            app:layout_constraintTop_toTopOf="@+id/editpassword_manager"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@mipmap/show_pass" />
+
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
