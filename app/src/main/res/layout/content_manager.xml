@@ -15,12 +15,38 @@
         android:layout_height="wrap_content">
 
 
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="96dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="40dp"
+            android:text="Chat"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/chat_manager"
+            app:layout_constraintTop_toBottomOf="@+id/chat_manager"
+            app:layout_constraintVertical_bias="0.050000012" />
+
+        <ImageView
+            android:id="@+id/chat_manager"
+            android:layout_width="96dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/invitation"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:srcCompat="@mipmap/chat_icon_2" />
+
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="238dp"
             android:layout_height="205dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="30dp"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -181,34 +207,6 @@
             app:srcCompat="@mipmap/requests_icon" />
 
         <ImageView
-            android:id="@+id/settings_manager"
-            android:layout_width="54dp"
-            android:layout_height="41dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@mipmap/settings_icon" />
-
-        <ImageView
-            android:id="@+id/chat_manager"
-            android:layout_width="54dp"
-            android:layout_height="41dp"
-            android:layout_marginStart="276dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/condoselect"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/settings_manager"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@mipmap/chat_icon" />
-
-        <ImageView
             android:id="@+id/profilemanager"
             android:layout_width="96dp"
             android:layout_height="99dp"
@@ -226,15 +224,17 @@
             android:layout_width="96dp"
             android:layout_height="18dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginBottom="40dp"
             android:gravity="center"
             android:text="@string/nav_profile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.23"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profilemanager" />
+            app:layout_constraintTop_toBottomOf="@+id/profilemanager"
+            app:layout_constraintVertical_bias="0.050000012" />
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>

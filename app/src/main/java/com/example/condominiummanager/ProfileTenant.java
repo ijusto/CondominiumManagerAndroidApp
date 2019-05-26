@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.condominiummanager.ui.login.LoginActivity;
+
 public class ProfileTenant extends AppCompatActivity {
 
     @Override
@@ -83,6 +85,23 @@ public class ProfileTenant extends AppCompatActivity {
 
                     edit.setText("Edit");
                 }
+            }
+        });
+
+        final Button logOutBtn = findViewById(R.id.logout_profile_tenant);
+        logOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(i);
+            }
+        });
+        final Button settings = findViewById(R.id.settings_profile_tenant);
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Settings.class);
+                startActivity(i);
             }
         });
     }

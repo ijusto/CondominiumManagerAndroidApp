@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.condominiummanager.ui.login.LoginActivity;
+
 public class profile_maintenance extends AppCompatActivity {
 
     @Override
@@ -86,6 +88,24 @@ public class profile_maintenance extends AppCompatActivity {
                 }
             }
         });
+
+        final Button logOutBtn = findViewById(R.id.logout_profile_maintenance);
+        logOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(i);
+            }
+        });
+        final Button settings = findViewById(R.id.settings_profile_maintenance);
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Settings.class);
+                startActivity(i);
+            }
+        });
+
     }
 
 }

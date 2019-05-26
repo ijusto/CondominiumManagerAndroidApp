@@ -24,7 +24,6 @@ public class Maintenance extends AppCompatActivity {
         final ImageView contacts = findViewById(R.id.contacts);
         final ImageView payments = findViewById(R.id.payments);
         final ImageView profile = findViewById(R.id.profilemaintenance);
-        final ImageView settings = findViewById(R.id.settings_maintenance);
         final ImageView chat = findViewById(R.id.chat_maintenance);
 
 
@@ -73,14 +72,6 @@ public class Maintenance extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), PaymentsMaintenance.class);
-                startActivity(i);
-            }
-        });
-
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Settings.class);
                 startActivity(i);
             }
         });
