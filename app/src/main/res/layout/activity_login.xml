@@ -150,4 +150,23 @@
         app:layout_constraintTop_toTopOf="@+id/password_warning_login"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/warning_pic" />
+
+    <ImageView
+        android:id="@+id/showpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_warning_login"
+        app:srcCompat="@mipmap/check_button" />
+
+    <ImageView
+        android:id="@+id/hidepassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/showpassword"
+        app:layout_constraintTop_toTopOf="@+id/showpassword"
+        app:srcCompat="@mipmap/deny_request_btn" />
 </android.support.constraint.ConstraintLayout>

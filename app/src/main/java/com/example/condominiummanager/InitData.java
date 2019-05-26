@@ -28,6 +28,9 @@ public class InitData extends AppCompatActivity {
         prefs.edit().putString("tenantmobileprivacy", "false").apply();
         prefs.edit().putString("managermobileprivacy", "false").apply();
         prefs.edit().putString("maintenancemobileprivacy", "false").apply();
+        prefs.edit().putString("tenantpassword", "pass1234").apply();
+        prefs.edit().putString("managerpassword", "joaquim").apply();
+        prefs.edit().putString("maintenancepassword", "pedromarques").apply();
 
 
 

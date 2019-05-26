@@ -40,53 +40,71 @@ public class ProfileTenant extends AppCompatActivity {
 
         TextView emailtext = findViewById(R.id.emailtext);
         TextView mobiletext = findViewById(R.id.mobiletext);
+        TextView password = findViewById(R.id.passwordtext_tenant);
 
         emailtext.setText(prefs.getString("tenantemail", "jcb@sapo.pt"));
         mobiletext.setText(prefs.getString("tenantmobile", "919999999"));
+        password.setText(new String(new char[prefs.getString("tenantpassword", "").length()]).replace("\0", "*"));
 
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edit.getText().equals("Edit")){
+                if(edit.getText().equals("Edit Personal Info")){
                     EditText editmail = findViewById(R.id.editemail);
                     TextView emailtext = findViewById(R.id.emailtext);
                     EditText editmobile = findViewById(R.id.editmobile);
                     TextView mobiletext = findViewById(R.id.mobiletext);
+                    TextView password = findViewById(R.id.passwordtext_tenant);
+                    EditText editpassword =  findViewById(R.id.editpassword_tenant);
+
+
 
                     String mobile = mobiletext.getText().toString();
                     String email = emailtext.getText().toString();
+                    String passwordstr = password.getText().toString();
                     editmail.setText(email);
                     editmobile.setText(mobile);
+                    editpassword.setHint(passwordstr);
 
                     emailtext.setVisibility(View.INVISIBLE);
                     editmail.setVisibility(View.VISIBLE);
                     mobiletext.setVisibility(View.INVISIBLE);
                     editmobile.setVisibility(View.VISIBLE);
+                    editpassword.setVisibility(View.VISIBLE);
+                    password.setVisibility(View.INVISIBLE);
 
 
                     edit.setText("Save");
 
-                }else{                    EditText editmail = findViewById(R.id.editemail);
+                }else{
+                    EditText editmail = findViewById(R.id.editemail);
                     TextView emailtext = findViewById(R.id.emailtext);
                     EditText editmobile = findViewById(R.id.editmobile);
                     TextView mobiletext = findViewById(R.id.mobiletext);
+                    TextView password = findViewById(R.id.passwordtext_tenant);
+                    EditText editpassword =  findViewById(R.id.editpassword_tenant);
 
 
                     String email = editmail.getText().toString();
                     String mobile = editmobile.getText().toString();
+                    String passwordstr = editpassword.getText().toString();
                     prefs.edit().putString("tenantemail",email).apply();
                     prefs.edit().putString("tenantmobile",mobile).apply();
+                    prefs.edit().putString("tenantpassword", passwordstr).apply();
                     emailtext.setText(email);
                     mobiletext.setText(mobile);
+                    password.setText(new String(new char[passwordstr.length()]).replace("\0", "*"));
                     emailtext.setVisibility(View.VISIBLE);
                     editmail.setVisibility(View.INVISIBLE);
                     mobiletext.setVisibility(View.VISIBLE);
                     editmobile.setVisibility(View.INVISIBLE);
+                    password.setVisibility(View.VISIBLE);
+                    editpassword.setVisibility(View.INVISIBLE);
 
                     Toast toast = Toast.makeText(getApplicationContext(), "Saved successfully", Toast.LENGTH_SHORT);
                     toast.show();
 
-                    edit.setText("Edit");
+                    edit.setText("Edit Personal Info");
                 }
             }
         });

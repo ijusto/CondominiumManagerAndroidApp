@@ -12,6 +12,8 @@ import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -40,20 +42,19 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
-
+        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", Context.MODE_PRIVATE);
         final Context context = getApplicationContext();
 
-        final String tenantuser = "jcb@sapo.pt";
-        final String tenantpassword = "pass1234";
-        final String manageruser = "joaquim_inac@sapo.pt";
-        final String managerpass = "joaquim";
-        final String maintenanceuser = "pedromarques@sapo.pt";
-        final String maintenancepass = "pedromarques";
+        final String tenantuser = prefs.getString("tenantemail", "");
+        final String tenantpassword = prefs.getString("tenantpassword", "");
+        final String manageruser = prefs.getString("manageremail", "");
+        final String managerpass = prefs.getString("managerpassword", "");
+        final String maintenanceuser = prefs.getString("maintenanceemail", "");
+        final String maintenancepass = prefs.getString("maintenancepassword", "");
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
-        final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", Context.MODE_PRIVATE);
         final Button registerbutton = findViewById(R.id.register);
 
 
@@ -61,6 +62,8 @@ public class LoginActivity extends AppCompatActivity {
         final ImageView email_warning_login_icon = findViewById(R.id.email_warning_login_icon);
         final TextView password_warning_login = findViewById(R.id.password_warning_login);
         final ImageView password_warning_login_icon = findViewById(R.id.password_warning_login_icon);
+        final ImageView showpassword = findViewById(R.id.showpassword);
+        final ImageView hidepassword = findViewById(R.id.hidepassword);
 
         registerbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,16 +75,23 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        /*loginButton.setOnClickListener(new View.OnClickListener(){
+        showpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
-                String username = usernameEditText.getText().toString();
-                prefs.edit().putString("usernametext", username).apply();
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
+                passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                showpassword.setVisibility(View.GONE);
+                hidepassword.setVisibility(View.VISIBLE);
             }
-        });*/
+        });
+
+        hidepassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                hidepassword.setVisibility(View.GONE);
+                showpassword.setVisibility(View.VISIBLE);
+            }
+        });
 
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -97,37 +107,33 @@ public class LoginActivity extends AppCompatActivity {
                 Toast usertoast = Toast.makeText(context, text2, duration);
 
 
-
-                switch (username) {
-                    case tenantuser:
-                        if (password.equals(tenantpassword)) {
-                            prefs.edit().putString("usernametext", "tenant").apply();
-                            startActivity(i);
-                        } else {
-                            passwordToast.show();
-                        }
-                        break;
-                    case maintenanceuser:
-                        if (password.equals(maintenancepass)) {
-                            prefs.edit().putString("usernametext", "maintenance").apply();
-                            startActivity(i);
-                        } else {
-                            passwordToast.show();
-                        }
-                        break;
-                    case manageruser:
-                        if (password.equals(managerpass)) {
-                            prefs.edit().putString("usernametext", "manager").apply();
-                            startActivity(i);
-                        } else {
-                            passwordToast.show();
-                        }
-                        break;
-                    default:
-                        usertoast.show();
-                        break;
-
+                if(username.equals(tenantuser)){
+                    if (password.equals(tenantpassword)){
+                        prefs.edit().putString("usernametext", "tenant").apply();
+                        startActivity(i);
+                    }else{
+                        passwordToast.show();
+                    }
+                }else if(username.equals(maintenanceuser)){
+                    if (password.equals(maintenancepass)){
+                        prefs.edit().putString("usernametext", "maintenance").apply();
+                        startActivity(i);
+                    }else{
+                        passwordToast.show();
+                    }
+                }else if(username.equals(manageruser)){
+                    if (password.equals(managerpass)) {
+                        prefs.edit().putString("usernametext", "manager").apply();
+                        startActivity(i);
+                    } else {
+                        passwordToast.show();
+                    }
+                }else{
+                    usertoast.show();
                 }
+
+
+
             }
         });
 
