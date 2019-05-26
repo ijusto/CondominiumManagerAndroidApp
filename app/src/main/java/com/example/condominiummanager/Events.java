@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.condominiummanager.ui.login.LoginActivity;
 
@@ -126,6 +127,8 @@ public class Events extends AppCompatActivity {
                         public void onClick(View v) {
                             TextView whois = findViewById(R.id.whosgoing);
                             if (going.isChecked()) {
+                                Toast toast = Toast.makeText(getApplicationContext(), "Marked as going", Toast.LENGTH_SHORT);
+                                toast.show();
                                 String whoistr = "";
                                 String username = prefs.getString("usernametext", "tenant");
                                 switch (username) {
@@ -149,6 +152,8 @@ public class Events extends AppCompatActivity {
                                         break;
                                 }
                             } else {
+                                Toast toast = Toast.makeText(getApplicationContext(), "Marked as not going", Toast.LENGTH_SHORT);
+                                toast.show();
                                 String whoistr = "";
                                 String username = prefs.getString("usernametext", "tenant");
 
