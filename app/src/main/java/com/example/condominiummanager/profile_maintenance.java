@@ -39,56 +39,71 @@ public class profile_maintenance extends AppCompatActivity {
 
         TextView emailtext = findViewById(R.id.emailtext_maintenance);
         TextView mobiletext = findViewById(R.id.mobiletext_maintenance);
+        TextView password = findViewById(R.id.passwordtext_maintenance);
 
         emailtext.setText(prefs.getString("maintenanceemail", "pedromarques@sapo.pt"));
         mobiletext.setText(prefs.getString("maintenancemobile", "919994524"));
+        password.setText(new String(new char[prefs.getString("maintenancepassword", "").length()]).replace("\0", "*"));
+
 
 
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edit.getText().equals("Edit")){
+                if(edit.getText().equals("Edit Personal Info")){
                     EditText editmail = findViewById(R.id.editemail_maintenance);
                     TextView emailtext = findViewById(R.id.emailtext_maintenance);
                     EditText editmobile = findViewById(R.id.editmobile_maintenance);
                     TextView mobiletext = findViewById(R.id.mobiletext_maintenance);
+                    TextView password = findViewById(R.id.passwordtext_maintenance);
+                    EditText editpassword =  findViewById(R.id.editpassword_maintenance);
 
                     String mobile = mobiletext.getText().toString();
                     String email = emailtext.getText().toString();
+                    String passwordstr = password.getText().toString();
                     editmail.setText(email);
                     editmobile.setText(mobile);
+                    editpassword.setHint(passwordstr);
+
 
                     emailtext.setVisibility(View.INVISIBLE);
                     editmail.setVisibility(View.VISIBLE);
                     mobiletext.setVisibility(View.INVISIBLE);
                     editmobile.setVisibility(View.VISIBLE);
+                    editpassword.setVisibility(View.VISIBLE);
+                    password.setVisibility(View.INVISIBLE);
 
 
                     edit.setText("Save");
-
                 }else{
                     EditText editmail = findViewById(R.id.editemail_maintenance);
                     TextView emailtext = findViewById(R.id.emailtext_maintenance);
                     EditText editmobile = findViewById(R.id.editmobile_maintenance);
                     TextView mobiletext = findViewById(R.id.mobiletext_maintenance);
+                    TextView password = findViewById(R.id.passwordtext_maintenance);
+                    EditText editpassword =  findViewById(R.id.editpassword_maintenance);
 
 
                     String email = editmail.getText().toString();
                     String mobile = editmobile.getText().toString();
+                    String passwordstr = editpassword.getText().toString();
+                    prefs.edit().putString("maintenanceemail",email).apply();
+                    prefs.edit().putString("maintenancemobile",mobile).apply();
+                    prefs.edit().putString("maintenancepassword", passwordstr).apply();
                     emailtext.setText(email);
                     mobiletext.setText(mobile);
-                    prefs.edit().putString("maintenanceemail",email).apply();
-                    prefs.edit().putString("maitenancemobile",mobile).apply();
+                    password.setText(new String(new char[passwordstr.length()]).replace("\0", "*"));
                     emailtext.setVisibility(View.VISIBLE);
                     editmail.setVisibility(View.INVISIBLE);
                     mobiletext.setVisibility(View.VISIBLE);
                     editmobile.setVisibility(View.INVISIBLE);
+                    password.setVisibility(View.VISIBLE);
+                    editpassword.setVisibility(View.INVISIBLE);
 
                     Toast toast = Toast.makeText(getApplicationContext(), "Saved successfully", Toast.LENGTH_SHORT);
                     toast.show();
 
-
-                    edit.setText("Edit");
+                    edit.setText("Edit Personal Info");
                 }
             }
         });
