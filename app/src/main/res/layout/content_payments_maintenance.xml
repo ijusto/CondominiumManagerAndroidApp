@@ -58,8 +58,8 @@
         android:id="@+id/payment_maintenance_check"
         android:layout_width="32dp"
         android:layout_height="34dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="72dp"
         android:gravity="center"
         android:scaleX="2"
         android:scaleY="2"
@@ -67,6 +67,17 @@
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="@+id/payment_maintenance_block"
         app:layout_constraintTop_toTopOf="@+id/payment_ammount" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:text="Mark as paid:"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/payment_maintenance_block"
+        app:layout_constraintTop_toBottomOf="@+id/payment_ammount" />
 
     <ImageView
         android:id="@+id/payment_maintenance_delete"

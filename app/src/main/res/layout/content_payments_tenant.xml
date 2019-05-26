@@ -64,11 +64,12 @@
         android:id="@+id/checkpayment"
         android:layout_width="32dp"
         android:layout_height="34dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="64dp"
         android:gravity="center"
         android:scaleX="2"
         android:scaleY="2"
+        android:text="hello"
         android:textColor="@color/ic_launcher_background"
         app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
         app:layout_constraintTop_toBottomOf="@+id/second_payment_manager_title" />
@@ -77,8 +78,8 @@
         android:id="@+id/delete_payment_tenant"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="68dp"
         app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
         app:layout_constraintTop_toBottomOf="@+id/second_payment_manager_title"
         app:srcCompat="@android:drawable/ic_menu_delete" />
@@ -95,5 +96,18 @@
         app:layout_constraintEnd_toEndOf="@+id/first_payment_tenant"
         app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
         app:layout_constraintTop_toBottomOf="@+id/second_payment_manager_title" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="8dp"
+        android:text="Mark as paid:"
+        app:layout_constraintEnd_toStartOf="@+id/checkpayment"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="@+id/first_payment_tenant"
+        app:layout_constraintTop_toTopOf="@+id/second_payment_manager_title" />
 
 </android.support.constraint.ConstraintLayout>
