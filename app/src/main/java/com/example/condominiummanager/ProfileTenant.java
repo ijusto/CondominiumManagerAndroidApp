@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.condominiummanager.ui.login.LoginActivity;
 
@@ -82,6 +83,8 @@ public class ProfileTenant extends AppCompatActivity {
                     mobiletext.setVisibility(View.VISIBLE);
                     editmobile.setVisibility(View.INVISIBLE);
 
+                    Toast toast = Toast.makeText(getApplicationContext(), "Saved successfully", Toast.LENGTH_SHORT);
+                    toast.show();
 
                     edit.setText("Edit");
                 }
