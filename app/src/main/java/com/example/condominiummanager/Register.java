@@ -38,6 +38,8 @@ public class Register extends AppCompatActivity {
         });
 
         final Button register = findViewById(R.id.reg_button);
+        TextView email = findViewById(R.id.email);
+        email.setText(prefs.getString("usernameregtext", ""));
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override

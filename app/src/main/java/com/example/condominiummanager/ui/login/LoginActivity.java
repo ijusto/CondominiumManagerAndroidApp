@@ -41,6 +41,14 @@ public class LoginActivity extends AppCompatActivity {
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
+        final Context context = getApplicationContext();
+
+        final String tenantuser = "jcb@sapo.pt";
+        final String tenantpassword = "pass1234";
+        final String manageruser = "joaquim_inac@sapo.pt";
+        final String managerpass = "joaquim";
+        final String maintenanceuser = "pedromarques@sapo.pt";
+        final String maintenancepass = "pedromarques";
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
@@ -57,12 +65,14 @@ public class LoginActivity extends AppCompatActivity {
         registerbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String username = usernameEditText.getText().toString();
+                prefs.edit().putString("usernameregtext", username).apply();
                 Intent i = new Intent(getApplicationContext(), Register.class);
                 startActivity(i);
             }
         });
 
-        loginButton.setOnClickListener(new View.OnClickListener(){
+        /*loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -71,7 +81,56 @@ public class LoginActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
+        });*/
+
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = usernameEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                CharSequence text = "Wrong password";
+                CharSequence text2 = "Wrong username";
+                int duration = Toast.LENGTH_SHORT;
+                Toast passwordToast = Toast.makeText(context, text, duration);
+                Toast usertoast = Toast.makeText(context, text2, duration);
+
+
+
+                switch (username) {
+                    case tenantuser:
+                        if (password.equals(tenantpassword)) {
+                            prefs.edit().putString("usernametext", "tenant").apply();
+                            startActivity(i);
+                        } else {
+                            passwordToast.show();
+                        }
+                        break;
+                    case maintenanceuser:
+                        if (password.equals(maintenancepass)) {
+                            prefs.edit().putString("usernametext", "maintenance").apply();
+                            startActivity(i);
+                        } else {
+                            passwordToast.show();
+                        }
+                        break;
+                    case manageruser:
+                        if (password.equals(managerpass)) {
+                            prefs.edit().putString("usernametext", "manager").apply();
+                            startActivity(i);
+                        } else {
+                            passwordToast.show();
+                        }
+                        break;
+                    default:
+                        usertoast.show();
+                        break;
+
+                }
+            }
         });
+
 
 
        /* loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {

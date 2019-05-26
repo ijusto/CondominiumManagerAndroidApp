@@ -16,7 +16,7 @@ public class InitData extends AppCompatActivity {
 
         final SharedPreferences prefs = this.getSharedPreferences("com.example.condominiummanager", Context.MODE_PRIVATE);
 
-        prefs.edit().putString("manageremail","joaquim_inac@spo.pt").apply();
+        prefs.edit().putString("manageremail","joaquim_inac@sapo.pt").apply();
         prefs.edit().putString("managermobile", "919999123").apply();
         prefs.edit().putString("tenantemail", "jcb@sapo.pt").apply();
         prefs.edit().putString("tenantmobile", "919999999").apply();

@@ -50,6 +50,29 @@ public class TaskList extends AppCompatActivity {
             CheckBox task = findViewById(R.id.tasktoadd);
             task.setText(prefs.getString("reporttitle", "Something wrong some place"));
             task.setVisibility(View.VISIBLE);
+            if(prefs.getString("check3", "").equals("true")){
+                check3.setPaintFlags(check3.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                check3.setChecked(true);
+            }else if(prefs.getString("check3", "").equals("false")){
+                check3.setPaintFlags(check3.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+                check3.setChecked(false);
+            }
+        }
+
+        if (prefs.getString("check1", "").equals("true")){
+            check1.setPaintFlags(check1.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            check1.setChecked(true);
+        }else if(prefs.getString("check1", "").equals("false")){
+            check1.setPaintFlags(check1.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+            check1.setChecked(false);
+        }
+
+        if (prefs.getString("check2", "").equals("true")){
+            check2.setPaintFlags(check2.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            check2.setChecked(true);
+        }else if(prefs.getString("check2", "").equals("false")){
+            check2.setPaintFlags(check2.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+            check2.setChecked(false);
         }
 
         check1.setOnClickListener(new View.OnClickListener() {
@@ -57,9 +80,12 @@ public class TaskList extends AppCompatActivity {
             public void onClick(View v) {
                 if (check1.isChecked()){
                     check1.setPaintFlags(check1.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    prefs.edit().putString("check1", "true").apply();
 
                 }else{
                     check1.setPaintFlags(check1.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+                    prefs.edit().putString("check1", "false").apply();
+
                 }
             }
         });
@@ -69,9 +95,12 @@ public class TaskList extends AppCompatActivity {
             public void onClick(View v) {
                 if (check2.isChecked()){
                     check2.setPaintFlags(check2.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    prefs.edit().putString("check2", "true").apply();
 
                 }else{
                     check2.setPaintFlags(check2.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+                    prefs.edit().putString("check2", "false").apply();
+
                 }
             }
         });
@@ -81,12 +110,18 @@ public class TaskList extends AppCompatActivity {
             public void onClick(View v) {
                 if (check3.isChecked()){
                     check3.setPaintFlags(check3.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-
+                    prefs.edit().putString("check3", "true").apply();
                 }else{
                     check3.setPaintFlags(check3.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+                    prefs.edit().putString("check3", "false").apply();
+
                 }
             }
         });
+
+
+
+
 
 
     }
